@@ -1,2 +1,8 @@
 _site
 .sass-cache
+_includes
+_layouts
+_posts
+_sass
+
+_config.yml
