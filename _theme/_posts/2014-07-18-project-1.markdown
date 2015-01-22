@@ -1,6 +1,7 @@
 ---
 layout: default
 modal-id: 1
+title: Mainbox
 date: 2014-07-17
 img: mainbox.png
 alt: Сервис доставки товаров из США
