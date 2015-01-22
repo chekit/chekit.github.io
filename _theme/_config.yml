@@ -28,10 +28,10 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: "Russia, Moscow Region,"
-  - line: Korolyov
+  - line: "Russia, Moscow"
+  # - line: Korolyov
 # Credits content
-credits: 'For this small site I have used a free Bootstrap theme Freelancer'
+credits: 'For this small site I have used a free Bootstrap theme Freelancer that was ported to Jekyll'
 
 # Build settings
 markdown: kramdown
