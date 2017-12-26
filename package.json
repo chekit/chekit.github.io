@@ -1,0 +1,19 @@
+{
+  "name": "chekit-portfolio",
+  "version": "2.0.0",
+  "description": "second variant of my portfolio site",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chekit/chekit.github.io.git"
+  },
+  "author": "Anton Cherepov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chekit/chekit.github.io/issues"
+  },
+  "homepage": "https://github.com/chekit/chekit.github.io#readme"
+}
