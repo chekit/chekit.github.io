@@ -4,7 +4,10 @@
   "description": "second variant of my portfolio site",
   "main": "dist/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp dev",
+    "build": "gulp build",
+    "predeploy": "npm build",
+    "deploy": "gh-pages -r https://github.com/chekit/chekit.github.io.git -o origin -d dist"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,21 @@
   "bugs": {
     "url": "https://github.com/chekit/chekit.github.io/issues"
   },
-  "homepage": "https://github.com/chekit/chekit.github.io#readme"
+  "homepage": "https://github.com/chekit/chekit.github.io#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gh-pages": "^1.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cache": "^1.0.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-debug": "^3.1.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sequence": "^0.4.6",
+    "gulp-sourcemaps": "^2.6.2",
+    "require-dir": "^0.3.2"
+  }
 }
