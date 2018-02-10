@@ -10,9 +10,9 @@
 
 .btn-rounded-dark-blue {
     display: inline-block;
-    color: #036ca0;
-    padding: 15px 25px;
-    border: 3px solid #036ca0;
+    color: white;
+    padding: $basic-padding 25px;
+    border: 3px solid white;
     border-radius: 30px;
 	transition: .4s ease all;
 	text-decoration: none;	
@@ -28,11 +28,11 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 15px;
+    bottom: $basic-padding;
 	z-index: 10;
     width: 100%;
     text-align: center;
-    color: #036ca0;
+    color: white;
 	
 	span {
 		display: flex;
@@ -42,7 +42,7 @@
 		width: 35px;
 		height: 35px;
 		border-radius: 50%;
-		border: 3px solid #036ca0;
+		border: 3px solid white;
 		text-align: center;
 		cursor: pointer;
 	}
