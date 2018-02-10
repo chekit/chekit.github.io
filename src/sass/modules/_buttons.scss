@@ -1,0 +1,56 @@
+@keyframes pulse {
+	0% {
+	  transform: translateY(0);
+	}
+  
+	100% {
+	  transform: translateY(3px);
+	}
+}
+
+.btn-rounded-dark-blue {
+    display: inline-block;
+    color: #036ca0;
+    padding: 15px 25px;
+    border: 3px solid #036ca0;
+    border-radius: 30px;
+	transition: .4s ease all;
+	text-decoration: none;	
+	
+	&:hover {
+		color: #036ca0;
+		background: #fff;
+		text-decoration: none;
+	}
+}
+
+.btn-down {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+	z-index: 10;
+    width: 100%;
+    text-align: center;
+    color: #036ca0;
+	
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+			margin: 0 auto;
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		border: 3px solid #036ca0;
+		text-align: center;
+		cursor: pointer;
+	}
+	
+	i {
+		&:hover {
+			animation: pulse .75s infinite steps(8);
+		}
+	}
+}
+

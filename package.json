@@ -20,6 +20,11 @@
   },
   "homepage": "https://github.com/chekit/chekit.github.io#readme",
   "devDependencies": {
+    "@babel/register": "^7.0.0-beta.39",
+    "babel-core": "^6.25.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "browser-sync": "^2.18.12",
     "del": "^3.0.0",
     "gh-pages": "^1.1.0",
     "gulp": "^3.9.1",
@@ -27,12 +32,17 @@
     "gulp-cache": "^1.0.1",
     "gulp-csso": "^3.0.0",
     "gulp-debug": "^3.1.0",
+    "gulp-imagemin": "^3.3.0",
     "gulp-notify": "^3.0.0",
     "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sequence": "^0.4.6",
     "gulp-sourcemaps": "^2.6.2",
+    "gulp-watch": "^4.3.11",
     "require-dir": "^0.3.2"
+  },
+  "dependencies": {
+    "normalize-scss": "^7.0.0"
   }
 }

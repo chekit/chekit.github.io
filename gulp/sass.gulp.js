@@ -10,7 +10,7 @@ import sourcemaps   from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
 
 gulp.task('sass', () => {
-	return gulp.src(`./src/sass/styles.scss`)
+	return gulp.src(`./src/sass/index.scss`)
 		.pipe(sourcemaps.init())
 		.pipe(
 			sass().on('error', notify.onError({
@@ -33,6 +33,7 @@ gulp.task('sass', () => {
 		}))
 		.pipe(csso())
 		.pipe(rename({
+			basename: 'styles',
 			suffix: '.min'
 		}))
 		.pipe(sourcemaps.write())
@@ -41,3 +42,8 @@ gulp.task('sass', () => {
 		}))
 		.pipe(gulp.dest(`./dist/css/`));
 });
+
+gulp.task('fonts', () => {
+	return gulp.src(`./src/sass/tools/font-awesome/webfonts/**/*.*`)
+		.pipe(gulp.dest(`./dist/css/webfonts`));
+})
