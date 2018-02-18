@@ -1,4 +1,26 @@
-$basic-padding: 15px;
+/*** Colors ***/
+$c-h2: #374054;
+$c-h2-border: #3498db;
+$c-p: #74808a;
+$c-link-hover: #3498db;
 
-$main-h1-size-desktop: (50 / 21) * 1em;
-$main-h2-size-desktop: (24 / 21) * 1em;
+$c-stackoverflow: #f48024;
+$c-github: #24292e;
+
+$c-section-border: #dcd9d9;
+$c-white-section-bg: #fff;
+$c-grey-section-bg: #f2f2f5;
+
+/*** Fonts ***/
+$ff-arial: Arial, "Helvetica Neue",Helvetica,sans-serif;
+$ff-lato: 'Lato', sans-serif;
+$ff-calibri: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
+/*** Measures ***/
+$m-basic-padding: 15px;
+$m-basic-fsz: 1.6rem;
+
+$m-main-h1-size-desktop: (50 / 21) * 1em;
+$m-main-h2-size-desktop: (24 / 21) * 1em;
+
+$m-section-mw: 900px;

@@ -1,2 +1,15 @@
 footer#footer
-	p!= '&copy; Anton Cherepov'
+	.wrapper
+		.copyright
+			p!= '&copy; Anton Cherepov'
+		.btn-up#to-top(data-srollto="intro")
+			span
+				i.fa.fa-chevron-up(aria-hidden="true")
+		.links
+			ul.links-list
+				li.links-list__item
+					a.links-list__link(href="https://github.com/chekit")
+						i.fab.fa-github(aria-hidden="true")
+				li.links-list__item
+					a.links-list__link(href="https://stackoverflow.com/users/3459995/chekit")
+						i.fab.fa-stack-overflow(aria-hidden="true")

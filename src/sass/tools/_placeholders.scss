@@ -1,11 +1,22 @@
+%section {
+	border-bottom: 1px solid $c-section-border;
+
+	.wrapper {
+		margin: 0 auto;
+		max-width: $m-section-mw;
+	}
+}
+
 %white-section {
-	background-color: #fff;
-	border-bottom: 1px solid #dcd9d9;
+	@extend %section;
+
+	background-color: $c-white-section-bg;
 }
 
 %grey-section {
-	background-color: 	#f2f2f5;;
-	border-bottom: 1px solid #dcd9d9;
+	@extend %white-section;
+
+	background-color: $c-grey-section-bg
 }
 
 %no-border-bottom {

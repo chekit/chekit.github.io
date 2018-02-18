@@ -1,0 +1,37 @@
+.links-list {
+	display: flex;
+	justify-content: flex-start;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	&__item {
+		margin: 0 $m-basic-padding 0 0;
+		text-align: center;
+		font-size: 2.1rem;
+		color: $c-p;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		color: inherit;
+		transition: all .35s ease-in-out;
+		
+		.fab {
+			transition: all .25s ease-in-out;
+		}
+
+		&:hover {
+			.fa-stack-overflow {
+				color: $c-stackoverflow;
+			}
+
+			.fa-github {
+				color: $c-github;
+			}
+		}
+	}
+}

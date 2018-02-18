@@ -1,4 +1,10 @@
 #footer {
 	@extend %white-section;
 	@extend %no-border-bottom;
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
