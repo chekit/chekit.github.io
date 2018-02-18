@@ -28,10 +28,10 @@ gulp.task('watch', function () {
 		});
 	}).on('ready', localhost.reload);
 
-	// watch(`${config.paths.es6}/**/*.js`, function () {
-	// 	return sequence('scripts')(function (err) {
-	// 		if (err) console.log(err)
-	// 	});
-	// }).on('ready', localhost.reload);
+	watch(`./src/**/*.ts`, function () {
+		return sequence('ts')(function (err) {
+			if (err) console.log(err)
+		});
+	}).on('ready', localhost.reload);
 });
 
