@@ -1,6 +1,9 @@
 #about {
 	@extend %white-section;	
 
+	overflow: hidden;
+	min-height: 300px;	
+
 	.wrapper {
 		display: flex;
 		align-items: center; 

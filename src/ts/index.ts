@@ -1,4 +1,6 @@
+import ScrollTo from './scrollto'; 
+
 document.addEventListener('DOMContentLoaded', () => {
-	console.log('hello');
-	
+	// Init Scroll To Target Module
+	new ScrollTo();
 });
