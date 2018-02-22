@@ -1,4 +1,4 @@
-export default class ScrollTo {
+class ScrollTo {
 	private SELECTOR: string = '[data-scrollto]';
 	private btnList: NodeListOf<HTMLElement>;
 	private targets: {[id: string]: number} = {};
@@ -31,3 +31,7 @@ export default class ScrollTo {
 		});
 	}
 }
+
+export const scrollto = {
+	init: () => new ScrollTo()
+};
