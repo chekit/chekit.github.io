@@ -1,3 +1,7 @@
 #experience {
 	@extend %grey-section;
+
+	.wrapper {
+		max-width: $m-section-mw--experience;
+	}
 }

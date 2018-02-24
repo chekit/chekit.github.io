@@ -29,6 +29,7 @@
 		line-height: 1;
 		font-size: $m-main-h1-size-desktop;
 		font-weight: 800;
+		font-family: $ff-lato-black;
 		text-transform: uppercase;
 		color: #052c48;
 		text-shadow: 0 0 2px rgba(255, 255, 255, 1);
@@ -38,6 +39,7 @@
 		margin: 0;
 		line-height: 1;
 		font-size: $m-main-h2-size-desktop;
+		font-family: $ff-lato-hairline;
 		color: #005077;
 	}
 }

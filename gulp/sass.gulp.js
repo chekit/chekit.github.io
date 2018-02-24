@@ -44,6 +44,6 @@ gulp.task('sass', () => {
 });
 
 gulp.task('fonts', () => {
-	return gulp.src(`./src/sass/tools/font-awesome/webfonts/**/*.*`)
-		.pipe(gulp.dest(`./dist/css/webfonts`));
+	return gulp.src(['./src/sass/base/fonts/**'])
+		.pipe(gulp.dest(`./dist/css/fonts`));
 })

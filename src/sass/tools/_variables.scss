@@ -13,7 +13,12 @@ $c-grey-section-bg: #f2f2f5;
 
 /*** Fonts ***/
 $ff-arial: Arial, "Helvetica Neue",Helvetica,sans-serif;
-$ff-lato: 'Lato', sans-serif;
+$ff-lato-thin: 'LatoWebThin', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$ff-lato-semibold: 'LatoWebSemibold', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$ff-lato-light: 'LatoWebLight', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$ff-lato-black: '"LatoWebBlack"', Arial, "Helvetica Neue",Helvetica, sans-serif;
+$ff-lato-hairline: 'LatoWebHairline', Arial, "Helvetica Neue",Helvetica, sans-serif;
+$ff-lato: 'LatoWeb', Arial, "Helvetica Neue",Helvetica, sans-serif;
 $ff-calibri: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 
 /*** Measures ***/
@@ -24,3 +29,4 @@ $m-main-h1-size-desktop: (50 / 21) * 1em;
 $m-main-h2-size-desktop: (24 / 21) * 1em;
 
 $m-section-mw: 900px;
+$m-section-mw--experience: 1000px;
