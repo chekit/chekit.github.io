@@ -1,6 +1,25 @@
+//- MIEM
+- var miem = {};
+- miem.title = 'Moscow Institute of Electronics and Mathematics, MIEM (Technical university)';
+- miem.period = 'Sept 2003 - Sept 2008';
+- miem.speciality = 'System Engineer (Specialist Diploma)';
+- miem.description = 'Russian higher educational institution in the field of electronics, computer engineering, and applied mathematics. Founded in 1962 as Moscow Institute of Electronic Machine Building (Russian: Московский институт электронного машиностроения), in 2011 joined with National Research University Higher School of Economics.';
+- miem.link = 'https://miem.hse.ru/';
+//- Yandex
+- var yandex = {};
+- yandex.title = 'ShRI (School of Interface Development by Yandex)';
+- yandex.period = 'July 2017 - Sept 2017';
+- yandex.description = 'The school is part of Mobilisation project by Yandex that helds designers, managers, mobile developers and frontend developers. I was took a part only in the first round of school and quit of the second round by my own reasons';
+- yandex.link = 'https://miem.hse.ru/';
+//- LoftSchool
+- var loftschool = {};
+- loftschool.title = 'The complex education of web-development';
+- loftschool.period = 'Oct 2014 - Jan 2017';
+- loftschool.description = 'Online course for developers and coders by Loftschool';
+
 section#education
 	.wrapper
 		.heading
 			h2 Education
 		.body
-			p.body__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+			+education-block([miem, yandex, loftschool])

@@ -1,0 +1,10 @@
+mixin education-block(places = [])
+	each place in places
+		.education-block
+			.education-block__heading
+				h3.education-block__h3!= place.title
+				p.education-block__date!= place.period
+				if  place.speciality
+					h4.education-block__h4!= place.speciality
+			if  place.description
+				p.education-block__text!= place.description
