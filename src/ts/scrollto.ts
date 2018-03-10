@@ -7,7 +7,7 @@ export default class ScrollTo {
 		this.btnList = document.querySelectorAll(this.SELECTOR);
 
 		if (this.btnList.length > 0) {
-			this.initEventListener();
+			setTimeout(() => this.initEventListener(), 300);
 		}
 	}
 
@@ -26,7 +26,7 @@ export default class ScrollTo {
 
 	private scrollToTarget(id: string): void {
 		window.scroll({
-			top: this.targets[id] ? this.targets[id] : 0 ,
+			top: this.targets[id] || 0 ,
 			behavior: 'smooth'
 		});
 	}

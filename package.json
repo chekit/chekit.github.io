@@ -5,7 +5,7 @@
   "main": "dist/index.html",
   "scripts": {
     "start": "gulp dev",
-    "build": "gulp build",
+    "build": "gulp",
     "predeploy": "npm build",
     "deploy": "gh-pages -r https://github.com/chekit/chekit.github.io.git -o origin -d dist"
   },
