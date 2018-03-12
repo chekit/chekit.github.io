@@ -1,0 +1,18 @@
+- var image_cap = 'images/project_src.png'
+
+mixin project(projectsList = [])
+	each project in projectsList
+		.project
+			.project__image
+				if project.image
+					img.project__image-src(src=project.image)
+				else
+					img.project__image-src(src=image_cap)
+			.project__info
+				h3.project__info-name!= project.name
+				each desc in project.description
+					p.project__info-description!= desc
+				if project.link
+					p.project__info-link
+						each link in project.link
+							a(href=link.href, target="_blank")!=link.title || 'View Project'

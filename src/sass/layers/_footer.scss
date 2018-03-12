@@ -6,5 +6,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		max-width: $m-section-mw--experience;
+	}
+
+	.copyright {
+		white-space: nowrap;
 	}
 }

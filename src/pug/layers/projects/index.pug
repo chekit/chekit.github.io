@@ -1,6 +1,72 @@
+//- DATING
+- var mtsrb = {};
+- mtsrb.name = 'Dating services for <strong>MTS RB</strong>, <strong>Life:) RB</strong>, <strong>Velcom (Vmeste!)</strong>';
+//- - mtsrb.image = 'asdsad';
+- mtsrb.description = [];
+- mtsrb.description.push('<strong>SPA for mobile operators.</strong>');
+- mtsrb.description.push('As part of the developers team for that list of projects I\'ve prepared the code base using <strong>Pug</strong>, <strong>Scss</strong>, <strong>AngularJS</strong> and task manager <strong>Gulp</strong>, that has built it all together. The prepaired code base could be scaled for different operators using their own styleguides, requires and features.');
+- mtsrb.description.push('MTS RB has already been changed to another concept.');
+- mtsrb.link = [];
+- mtsrb.link.push({href: 'http://dating.life.com.by/lifeapp/', title: 'View Life:) RB'});
+- mtsrb.link.push({href: 'http://dating.mts.by/mtsrbapp/', title: 'View MTS RB'});
+- mtsrb.link.push({href: 'http://vmeste.velcom.by/velcomapp/', title: 'View Velcom RB'});
+//- MUSIC TELE2
+- var tele2 = {};
+- tele2.name = 'Music service for <strong>TELE2 KZ</strong>';
+//- - tele2.image = 'asdsad';
+- tele2.description = [];
+- tele2.description.push('<strong>SPA for mobile operator.</strong>');
+- tele2.description.push('As part of the developers team for that project I\'ve prepared the code base using <strong>Pug</strong>, <strong>Scss</strong>, <strong>AngularJS</strong> and task manager <strong>Gulp</strong>, that has built it all together.');
+- tele2.link = [];
+- tele2.link.push({href: 'http://muz.tele2.kz/app/'});
+//- SKIDKA
+- var mts = {};
+- mts.name = 'Discount service for MTS';
+//- - mts.image = 'asdsad';
+- mts.description = [];
+- mts.description.push('As part of the developers team for that project I\'ve prepared responsive layouts using Pug and Scss, made coding with AngularJS for frontend part of the site.');
+- mts.link = [];
+- mts.link.push({href: 'http://skidka.mts.ru/'});
+//- DEREVO
+- var derevo = {};
+- derevo.name = 'Social Network "Rodovoe Derevo"';
+//- - derevo.image = 'asdsad';
+- derevo.description = [];
+- derevo.description.push('As part of the developers team for that project I\'ve prepared web layouts using HTML and CSS, integrated html layouts with PHP backend.');
+- derevo.link = [];
+- derevo.link.push({href: 'http://rodovoederevo.ru/'});
+//- VARIANT
+- var variant = {};
+- variant.name = 'Landing page for HR Agency "Variant"';
+//- - variant.image = 'asdsad';
+- variant.description = [];
+- variant.description.push('For that project I\'ve prepared responsive layouts using Pug and Scss, made coding with vanilla <strong>JavaScript (ES2015)</strong>.');
+- variant.link = [];
+- variant.link.push({href: 'http://variant-hr.ru/'});
+//- ZNAK
+- var znak = {};
+- znak.name = 'Pages for "Znak Kachestva"';
+//- - znak.image = 'asdsad';
+- znak.description = [];
+- znak.description.push('For that project I\'ve prepared layouts using Pug and Scss, made some coding for interactive parts using jQuery.');
+- znak.link = [];
+- znak.link.push({href: 'http://znakachestva.ru/'});
+//- OPEN-AIR SALE
+- var openair = {};
+- openair.name = 'Promo pages for "Open Air Sale"';
+//- - openair.image = 'asdsad';
+- openair.description = [];
+- openair.description.push('For that project I\'ve prepared layouts using Pug and Scss, made some coding for interactive parts using jQuery.');
+- openair.link = [];
+- openair.link.push({href: 'http://www.spletnik.ru/vremenagoda'});
+
+
+
 section#projects
 	.wrapper
 		.heading
 			h2 Projects
 		.body
-			p.body__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+			p.align-center
+				strong Some of my projects that I was participated in or made as a freelance developer.
+			+project([mtsrb, tele2, mts, derevo, variant, znak, openair])

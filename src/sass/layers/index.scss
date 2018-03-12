@@ -6,3 +6,13 @@
 @import 'skills';
 @import 'contacts';
 @import 'footer';
+
+.align-center {
+	text-align: center;
+}
+
+.body {
+	& > p {
+		margin: 0 0 1em;
+	}
+}
