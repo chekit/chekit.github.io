@@ -1,6 +1,6 @@
 .project {
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
     overflow: hidden;
 	margin: 0 auto $m-basic-padding * 2;
@@ -18,10 +18,11 @@
 	}
 
 	&__image {
+		display: flex;
+		align-items: center;
 		overflow: hidden;
-		flex: 1;
 		max-width: 300px;
-		width: (300 / 900) * 100%;
+		width: (250 / 900) * 100%;
 
 		&-src {
 			display: block;
@@ -34,9 +35,9 @@
 		flex-direction: column;
 		justify-content: center;
 		text-align: center;
-		flex: 1;
+		// flex: 1;
 		padding: $m-basic-padding;
-		width: (600 / 900) * 100%;
+		width: (650 / 900) * 100%;
 
 		&-name {
 			margin: 0 0 $m-basic-padding 0;
@@ -80,6 +81,22 @@
 					border-bottom-color: $c-a--hover;
 				}
 			}
+		}
+	}
+
+	&-tech-list {
+		@extend .tag-list;
+		
+		align-self: flex-end;
+		padding-top: 5px;
+		border-top: 1px solid $c-section-border;
+
+		&__item {
+			@extend .tag;
+
+			padding: 2px 5px;
+			font-size: (10 / 14) * 1em;
+			color: $c-p;
 		}
 	}
 }

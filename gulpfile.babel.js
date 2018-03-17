@@ -6,6 +6,6 @@ import requireDir from 'require-dir';
 
 requireDir('./gulp');
 
-gulp.task('default', sequence(['clean', 'clear'], ['fonts', 'sass'], 'pug', 'images', 'libs', 'ts'));
+gulp.task('default', sequence(['clean', 'clear'], ['fonts', 'sass'], 'pug', 'images', 'libs', 'ts', 'files'));
 
 gulp.task('dev', sequence('default', 'server', 'watch'));
