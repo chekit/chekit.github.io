@@ -5,7 +5,7 @@ export default class ScrollTo {
 
 	constructor() {
 		this.btnList = document.querySelectorAll(this.SELECTOR);
-
+		
 		if (this.btnList.length > 0) {
 			setTimeout(() => this.initEventListener(), 300);
 		}
