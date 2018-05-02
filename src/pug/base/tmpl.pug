@@ -1,6 +1,15 @@
 doctype
 html.no-js(lang="ru")
   head
+    // Global site tag (gtag.js) - Google Analytics
+    script(src="https://www.googletagmanager.com/gtag/js?id=UA-32510547-2", async)
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-32510547-2');
+    // /Global site tag (gtag.js) - Google Analytics
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     title!= pageTitle
