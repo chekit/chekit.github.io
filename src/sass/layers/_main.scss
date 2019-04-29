@@ -43,3 +43,11 @@
 		color: #005077;
 	}
 }
+
+.download {
+	display: flex;
+
+	&__button {
+		margin: 0 5px;
+	}
+}
