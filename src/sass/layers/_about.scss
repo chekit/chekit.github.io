@@ -21,4 +21,10 @@
 	.body {
 		width: 67%;
 	}
+
+	.avatar {
+		@media screen and (max-width: 780px) {
+			display: none;
+		}
+	}
 }

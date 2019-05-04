@@ -16,6 +16,10 @@ body {
 section,
 footer {
 	padding: ($m-basic-padding * 3) $m-basic-padding;
+
+	@media screen and (max-width: 780px) {
+		padding: round($m-basic-padding * 1.5) $m-basic-padding;
+	}
 }
 
 h2 {

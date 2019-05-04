@@ -4,4 +4,34 @@
 	.wrapper {
 		max-width: $m-section-mw--experience;
 	}
+
+	.timeline {
+		&:before,
+		&:after {
+			@media screen and (max-width: 780px) {
+				display: none;
+			}
+		}
+	}
+
+	.job {
+		&__icon {
+			@media screen and (max-width: 780px) {
+				display: none;
+			}
+		}
+
+		&__date {
+			@media screen and (max-width: 780px) {
+				width: 100px;
+				margin-right: 10px;
+			}
+		}
+
+		&__description {
+			@media screen and (max-width: 780px) {
+				width: 70%;
+			}
+		}
+	}
 }

@@ -1,3 +1,17 @@
 #projects {
 	@extend %grey-section;
+
+	.project {
+		&__image {
+			@media screen and (max-width: 780px) {
+				display: none;
+			}
+		}
+
+		&__info {
+			@media screen and (max-width: 780px) {
+				width: 100%;
+			}
+		}
+	}
 }

@@ -1,3 +1,7 @@
 #contacts {
 	background-color: #3498db;
+
+	@media screen and (max-width: 780px) {
+		padding: 10px;
+	}
 }
