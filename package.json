@@ -1,0 +1,47 @@
+{
+  "name": "chekit.github.io",
+  "version": "1.0.0",
+  "description": "nodejs version of my portfolio web-site",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run scss",
+    "start": "tsnd --respawn index.ts",
+    "ts": "tsc --outFile public/js/scripts.min.js src/ts/index.ts --module amd",
+    "prescss": "npm run ts",
+    "scss": "node-sass src/scss/index.scss public/css/index.css",
+    "scss:watch": "node-sass src/scss/index.scss public/css/index.css --watch"
+  },
+  "dependencies": {
+    "@types/cookie-parser": "^1.4.1",
+    "@types/express-session": "^1.15.13",
+    "@types/formidable": "^1.0.31",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "formidable": "^1.2.1",
+    "pug": "^2.0.4",
+    "normalize-scss": "^7.0.1",
+    "smoothscroll-polyfill": "^0.4.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "node-sass": "^4.12.0",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3",
+    "zombie": "^6.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chekit/chekit.github.io.git"
+  },
+  "author": "Anton Cherepov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chekit/chekit.github.io/issues"
+  },
+  "homepage": "https://github.com/chekit/chekit.github.io#readme"
+}

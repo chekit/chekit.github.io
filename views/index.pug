@@ -1,0 +1,9 @@
+extends ./base/template
+
+//- This block will be injected to basic tmpl
+block content
+	include sections/index
+
+//- This block will be injected to basic tmpl
+block scripts
+	script(src="js/scripts.min.js", defer)
