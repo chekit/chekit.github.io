@@ -3347,7 +3347,8 @@ p {
     color: #005077; }
 
 .download {
-  display: flex; }
+  display: flex;
+  margin-bottom: 80px; }
   .download__button {
     margin: 0 5px; }
 

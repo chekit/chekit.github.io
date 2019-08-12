@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "npm run scss",
     "start": "tsnd --respawn index.ts",
-    "ts": "tsc --outFile public/js/scripts.min.js src/ts/index.ts --module amd",
+    "ts": "tsc",
     "prescss": "npm run ts",
     "scss": "node-sass src/scss/index.scss public/css/index.css",
     "scss:watch": "node-sass src/scss/index.scss public/css/index.css --watch"

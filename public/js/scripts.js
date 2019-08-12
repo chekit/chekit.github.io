@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var ScrollTo = /** @class */ (function () {
     function ScrollTo() {
         var _this = this;
@@ -29,4 +27,7 @@ var ScrollTo = /** @class */ (function () {
     };
     return ScrollTo;
 }());
-exports["default"] = ScrollTo;
+document.addEventListener('DOMContentLoaded', function () {
+    // Init Scroll To Target Module
+    new ScrollTo();
+});
