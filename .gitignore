@@ -38,3 +38,6 @@ node_modules/
 jspm_packages/
 
 package-lock.json
+
+public/css/**/*.css
+public/js/*.js
