@@ -6,6 +6,8 @@
   "scripts": {
     "prestart": "npm run scss",
     "start": "tsnd --respawn index.ts",
+    "prebuild": "npm run scss",
+    "build": "tsnd index.ts",
     "ts": "tsc",
     "prescss": "npm run ts",
     "scss": "node-sass src/scss/index.scss public/css/index.css",
@@ -43,5 +45,6 @@
   "bugs": {
     "url": "https://github.com/chekit/chekit.github.io/issues"
   },
-  "homepage": "https://github.com/chekit/chekit.github.io#readme"
+  "homepage": "https://github.com/chekit/chekit.github.io#readme",
+  "readme": "README.md"
 }
