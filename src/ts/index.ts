@@ -17,7 +17,7 @@ class ScrollTo {
 
             this.saveTargetOffset(id);
             item.addEventListener('click', () => this.scrollToTarget(id), false);
-        })
+        });
     }
 
     private saveTargetOffset(id: string): void {
