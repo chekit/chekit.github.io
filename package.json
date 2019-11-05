@@ -7,7 +7,8 @@
     "start": "gulp dev",
     "build": "gulp",
     "predeploy": "npm build",
-    "deploy": "gh-pages -r https://github.com/chekit/chekit.github.io.git -o origin -d dist"
+    "deploy": "git checkout master && cp ./dist/* . && rm -rf ./dist",
+    "postdeploy": "git add . && git commit -m 'Update page data' && git push origin master"
   },
   "repository": {
     "type": "git",

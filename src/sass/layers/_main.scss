@@ -1,53 +1,53 @@
 #intro {
-	box-sizing: border-box;
-	position: relative;
+    box-sizing: border-box;
+    position: relative;
     overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
     height: 100vh;
     min-height: 500px;
-	max-height: 1080px;
-	background: transparent url('./../images/intro-bg_2.jpg') 50% 50% no-repeat;
-	background-size: cover;
-	font-size: 2.1rem;
-	// background-color: rgba(0, 54, 74, 0.67);
+    max-height: 1080px;
+    background: rgba(3, 108, 160, 0.72) url('./../images/intro-bg_2.jpg') 50% 50% no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 2.1rem;
 }
 
 .info {
-	width: 100%;
-	margin: 0 0 5em;
-	padding: $m-main-h1-size-desktop 0;
-	background-color: rgba(255, 255, 255, .35);
-	text-align: center;
-	font-size: 1em;
+    width: 100%;
+    margin: 0 0 5em;
+    padding: $m-main-h1-size-desktop 0;
+    background-color: rgba(255, 255, 255, .35);
+    text-align: center;
+    font-size: 1em;
 
-	&__name {
-		margin: 0 0 .3em;
-		line-height: 1;
-		font-size: $m-main-h1-size-desktop;
-		font-weight: 800;
-		font-family: $ff-lato-black;
-		text-transform: uppercase;
-		color: #052c48;
-		text-shadow: 0 0 2px rgba(255, 255, 255, 1);
-	}
-	
-	&__position {
-		margin: 0;
-		line-height: 1;
-		font-size: $m-main-h2-size-desktop;
-		font-family: $ff-lato-semibold;
-		color: #005077;
-	}
+    &__name {
+        margin: 0 0 .3em;
+        line-height: 1;
+        font-size: $m-main-h1-size-desktop;
+        font-weight: 800;
+        font-family: $ff-lato-black;
+        text-transform: uppercase;
+        color: #052c48;
+        text-shadow: 0 0 2px rgba(255, 255, 255, 1);
+    }
+
+    &__position {
+        margin: 0;
+        line-height: 1;
+        font-size: $m-main-h2-size-desktop;
+        font-family: $ff-lato-semibold;
+        color: #005077;
+    }
 }
 
 .download {
-	display: flex;
+    display: flex;
 
-	&__button {
-		margin: 0 5px;
-	}
+    &__button {
+        margin: 0 5px;
+    }
 }
