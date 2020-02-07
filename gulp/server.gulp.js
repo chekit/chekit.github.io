@@ -1,23 +1,17 @@
-'use strict';
-
-import gulp        from 'gulp';
 import browserSync from 'browser-sync';
-
-const localhost = browserSync.create();
-
-let files = [
-	`./dist/css/**/*.css`,
-	`./dist/images/**/*.{jpg,png,svg,json}`,
-	`./dist/**/*.html`,
-	`./dist/js/**/*.js`
-];
+import gulp from 'gulp';
 
 gulp.task('server', () => {
-	localhost.init({
+	browserSync.init({
 		startPath: `/`,
 		server: {
-			baseDir: `./dist/`
-		},
-		files: files
+			baseDir: `${pathsBUILD.base}`,
+		}
 	});
-})
+});
+
+//Browser Reload Function
+gulp.task('reload', (done) => {
+	browserSync.reload();
+	done();
+});

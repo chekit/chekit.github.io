@@ -1,7 +1,6 @@
 'use strict';
 
-import gulp  from 'gulp';
-import cache from 'gulp-cache';
+import gulp from 'gulp';
 
 gulp.task('files', () => {
 	return gulp.src(`./src/files/**/*.*`)
