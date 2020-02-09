@@ -17,6 +17,47 @@
 		border-color: white;
 	}
 
+	.job & {
+		display: block;
+		border: none;
+		box-shadow: none;
+		border-radius: 0;
+		padding: .5em;
+
+		a {
+			color: #3498db;
+			text-decoration: none;
+			border-bottom: 1px solid transparent;
+			transition: all .15s ease-in-out;
+
+			&:hover {
+				color: darken( #3498db, 5%);
+				border-bottom-color: #3498db;
+			}
+		}
+
+		&__name {
+			margin: 0 0 1em;
+			font-size: 1.8rem;
+
+		}
+
+		&__description {
+			margin: 0 0 1em;
+
+			p {
+				margin-bottom: .5em;
+				font-size: 1.4rem;
+			}
+		}
+
+		&__tech {
+			p {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
 	&__image {
 		display: flex;
 		align-items: center;

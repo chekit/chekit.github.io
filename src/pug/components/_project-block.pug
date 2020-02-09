@@ -1,4 +1,4 @@
-- var image_cap = 'project_src.png'
+- var image_cap = 'images/projects/project_src.png'
 //- - var image_cap = 'constructocat2.jpg'
 
 mixin project(projectsList = [])
@@ -6,11 +6,12 @@ mixin project(projectsList = [])
 		if project
 			.project
 				.project__image
-					img.project__image-src(src=`images/projects/${project.image || image_cap}`)
+					img.project__image-src(src=`${project.image || image_cap}`)
 				.project__info
 					h3.project__info-name!= project.name
-					each desc in project.description
-						p.project__info-description!= desc
+					if project.description
+						each desc in project.description
+							p.project__info-description!= desc
 					if project.link
 						p.project__info-link
 							each link in project.link

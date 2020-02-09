@@ -1,0 +1,25 @@
+mixin job(positions = [])
+	.timeline
+		each position in positions
+			.timeline__item
+				.job
+					.job__date
+						p!= position.period 
+					.job__icon
+						i.fa.fa-map-marker-alt
+					.job__description
+						h3!= position.employer
+						h4!= position.job
+						p!= position.description
+						if position.projects
+							.job__projects
+								h3 Projects
+								.projects-list
+									each project in position.projects
+										.projects-list__item.project
+											h3.project__name!=project.name
+											.project__description
+												each desc in project.description
+													p!=desc
+											.project__tech
+												p!=`<strong>Techstack</strong>: ${project.techstack.join(', ')}.`
