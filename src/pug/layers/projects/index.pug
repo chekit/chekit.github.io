@@ -71,11 +71,11 @@
 - gbp.name = 'Generator Basic Page';
 - gbp.image = 'https://raw.githubusercontent.com/chekit/generator-basic-page/master/logo.jpg';
 - gbp.description = [];
-- gbp.description.push('The boilerplate project to create web pages with Pug, Scss and JS and task manager Gulp.');
+- gbp.description.push('The boilerplate project to create web pages with Pug, Scss, TypeScript and task manager Gulp.');
 - gbp.link = [];
 - gbp.link.push({href: 'https://github.com/chekit/generator-basic-page'});
-- gbp.techstack = ['Pug', 'Scss', 'JavaScript', 'Gulp', 'Babel', 'SMACSS'];
-//- Boilerplate
+- gbp.techstack = ['Pug', 'Scss', 'TypeScript', 'Gulp', 'Babel', 'SMACSS'];
+//- Split FIle
 - var sfjs = {};
 - sfjs.name = 'split-file-js';
 - sfjs.image = 'https://raw.githubusercontent.com/chekit/split-file-js/master/scissors.png';
@@ -84,6 +84,15 @@
 - sfjs.link = [];
 - sfjs.link.push({href: 'https://github.com/chekit/split-file-js'});
 - sfjs.techstack = ['JavaScript', 'NodeJS', 'Npm'];
+//- Xlf2Xlf
+- var xlf2xlf = {};
+- xlf2xlf.name = 'XLF2XLF (ex. google-translate-xlf)';
+- xlf2xlf.image = 'https://github.com/chekit/xlf2xlf/raw/master/logo.png';
+- xlf2xlf.description = [];
+- xlf2xlf.description.push('A command-line utility to automatically translate .xlf translation files using Google Translate');
+- xlf2xlf.link = [];
+- xlf2xlf.link.push({href: 'https://github.com/chekit/xlf2xlf'});
+- xlf2xlf.techstack = ['JavaScript', 'NodeJS', 'Npm', 'Angular', 'i18n'];
 
 //- PAGE
 section#projects
@@ -93,4 +102,4 @@ section#projects
 		.body
 			p.align-center
 				strong Some of my own projects and libraries.
-			+project([gbp, sfjs])
+			+project([gbp, xlf2xlf, sfjs])

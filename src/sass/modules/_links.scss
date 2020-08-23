@@ -23,7 +23,7 @@
 		display: block;
 		color: inherit;
 		transition: all .35s ease-in-out;
-		
+
 		.fab {
 			transition: all .25s ease-in-out;
 		}
@@ -34,6 +34,10 @@
 			}
 
 			.fa-github {
+				color: $c-github;
+			}
+
+			.fa-linkedin {
 				color: $c-github;
 			}
 		}

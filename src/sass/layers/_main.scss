@@ -47,7 +47,15 @@
 .download {
     display: flex;
 
+    &__text {
+        text-align: center;
+        color: white;
+    }
+
     &__button {
         margin: 0 5px;
+        min-width: 40px;
+        line-height: 1em;
+        text-align: center;
     }
 }
