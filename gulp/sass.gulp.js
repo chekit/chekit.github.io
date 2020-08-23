@@ -13,7 +13,7 @@ gulp.task('sass', () => {
 		.pipe(sourcemaps.init())
 		.pipe(
 			sass().on('error', notify.onError({
-				title: "Error in Sass",
+				title: "[ERROR] Sass",
 				message: "Error: <%= error.message %>",
 			}))
 		)
@@ -27,7 +27,7 @@ gulp.task('sass', () => {
 		}))
 		.pipe(sourcemaps.write())
 		.pipe(debug({
-			title: '* SASS ==> Done:'
+			title: '[SASS STAGE] Done:'
 		}))
 		.pipe(browserSync.reload({
 			stream: true
