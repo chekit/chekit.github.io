@@ -24,6 +24,12 @@
     text-align: center;
     font-size: 1em;
 
+
+	@media screen and (max-width: 780px) {
+        margin-bottom: 2em;
+        padding: $m-main-h1-size-mobile 0;
+    }
+
     &__name {
         margin: 0 0 .3em;
         line-height: 1;
@@ -46,10 +52,17 @@
 
 .download {
     display: flex;
+    flex-direction: column;
 
     &__text {
+        font-size: 1.8rem;
+        margin-bottom: .5em;
         text-align: center;
         color: white;
+    }
+
+    &__links {
+        margin: 0;
     }
 
     &__button {
