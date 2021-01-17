@@ -5,9 +5,7 @@
   "main": "dist/index.html",
   "scripts": {
     "start": "gulp dev",
-    "build": "gulp",
-    "predeploy": "npm build",
-    "deploy": "git checkout master && cp ./dist/* . && rm -rf ./dist"
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
