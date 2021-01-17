@@ -76,4 +76,4 @@ debug.log
 undefined/
 
 package-lock.json
-dist/
+# dist/
