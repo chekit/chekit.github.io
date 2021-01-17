@@ -9,7 +9,7 @@ global.pathsBUILD = global.config.paths.build;
 
 requireDir('./gulp');
 
-gulp.task('default', gulp.series('clean', 'sass', 'fonts', 'pug', 'images', gulp.parallel('libs:copy', 'modernizr')));
+gulp.task('default', gulp.series('clean', 'sass', 'fonts', 'pug', 'images', gulp.parallel('libs:copy', 'modernizr'), 'files:copy'));
 
 gulp.task('dev', gulp.series('default', 'scripts:dev', gulp.parallel('watch', 'server')));
 gulp.task('build', gulp.series('default', 'scripts'));
