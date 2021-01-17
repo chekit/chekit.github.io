@@ -4,7 +4,7 @@
             "base": "./src/",
             "sass": "./src/sass/index.scss",
             "ts": "./src/ts/index.ts",
-            "libs": "./src/libs/",
+            "libs": "./src/libs/**/*.*",
             "pug": "./src/pug/*.pug",
             "img": "./src/images/**/*.{png,jpg,svg,ico}"
         },
@@ -12,7 +12,7 @@
             "base": "./dist/",
             "css": "./dist/css/",
             "js": "./dist/js/",
-            "libs": "./dist/js/libs/",
+            "libs": "./dist/js/libs",
             "html": "./dist/",
             "img": "./dist/images/"
         }
