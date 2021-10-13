@@ -5,6 +5,11 @@
 - miem.speciality = 'System Engineer (Specialist Diploma)';
 - miem.description = 'Russian higher educational institution in the field of electronics, computer engineering, and applied mathematics. Founded in 1962 as Moscow Institute of Electronic Machine Building (Russian: Московский институт электронного машиностроения), in 2011 joined with National Research University Higher School of Economics.';
 - miem.link = 'https://miem.hse.ru/';
+//- LoftSchool
+- var loftschool_1 = {};
+- loftschool_1.title = 'React.js Web applications development';
+- loftschool_1.period = 'Aug 2020 - Sep 2020';
+- loftschool_1.description = 'Online course for developers to be more comfortable to develop with ReactJS, Redux, Redux-Saga';
 //- Yandex
 - var yandex = {};
 - yandex.title = 'ShRI (School of Interface Development by Yandex)';
@@ -12,14 +17,14 @@
 - yandex.description = 'The school is part of Mobilisation project by Yandex that helds designers, managers, mobile developers and frontend developers. I was took a part only in the first round of school and quit of the second round <strong>by my own reasons</strong	>';
 - yandex.link = 'https://miem.hse.ru/';
 //- LoftSchool
-- var loftschool = {};
-- loftschool.title = 'The complex education of web-development';
-- loftschool.period = 'Oct 2014 - Jan 2017';
-- loftschool.description = 'Online course for developers and coders by Loftschool';
+- var loftschool_2 = {};
+- loftschool_2.title = 'The complex education of web-development';
+- loftschool_2.period = 'Oct 2014 - Jan 2017';
+- loftschool_2.description = 'Online course for developers and coders by Loftschool';
 
 section#education
 	.wrapper
 		.heading
 			h2 Education
 		.body
-			+education-block([miem, yandex, loftschool])
+			+education-block([miem, loftschool_1, yandex, loftschool_2])
