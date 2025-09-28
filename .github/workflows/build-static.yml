@@ -2,9 +2,9 @@ name: Build Static
 
 on:
   push:
-    branches: [vite-migrate-clean]
+    branches: [master]
   pull_request:
-    branches: [vite-migrate-clean]
+    branches: [master]
 
   workflow_dispatch:
 
