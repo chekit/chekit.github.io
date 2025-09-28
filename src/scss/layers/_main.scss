@@ -19,6 +19,7 @@
 }
 
 .info {
+    position: relative;
     width: 100%;
     margin: 0 0 5em;
     padding: variables.$m-main-h1-size-desktop 0;
@@ -53,6 +54,7 @@
 }
 
 .download {
+    position: relative;
     display: flex;
     flex-direction: column;
 
@@ -72,5 +74,38 @@
         min-width: 40px;
         line-height: 1em;
         text-align: center;
+    }
+}
+
+
+.under-construction {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    width: 160px;
+    height: 160px;
+    border: 5px solid black;
+    border-radius: 25px;
+    background-color: yellow;
+    color: black;
+    font-size: 4em;
+    opacity: .34;
+    transform: rotate(48deg);
+
+
+    p {
+        color: black;
+        font-weight: 800;
+        font-size: 2rem;
+        transform: rotate(-48deg);
+        text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
     }
 }
