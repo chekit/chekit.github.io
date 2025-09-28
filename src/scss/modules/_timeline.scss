@@ -1,0 +1,114 @@
+@use './../tools/variables';
+@use 'sass:math';
+
+$date: 250;
+$icon: 90;
+$mw: math.div(variables.$m-section-mw--experience, 1px);
+$description: $mw - $date - $icon;
+
+.timeline {
+	position: relative;
+	width: 100%;
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: math.round($date + math.div($icon, 2) - 1.5) * 1px;
+		width: 3px;
+		height: 100%;
+		background-color: #3498db;
+		content: '';
+	}
+
+	&:after {
+		position: absolute;
+		top: 100%;
+		left: math.round($date + math.div($icon, 2) - 1.5) * 1px;
+		width: 3px;
+		height: 40px;
+		background: #3498db;
+		background: linear-gradient(to bottom, #3498db, rgba(52, 152, 219, 0));
+		content: '';
+	}
+}
+
+.job {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 3em;
+	font-size: 1rem;
+
+	h3 {
+		font-size: 2.4em;
+		font-family: variables.$ff-lato-thin;
+	}
+
+	h4 {
+		font-size: 1.9em;
+		font-family: variables.$ff-lato-thin;
+	}
+
+	p,
+	ul {
+		font-size: 1.5em;
+	}
+
+	&__icon {
+		position: relative;
+		z-index: 99;
+		display: flex;
+		flex-grow: 0;
+		flex-shrink: 0;
+		justify-content: center;
+		align-items: center;
+		margin: 0 20px;
+		width: 50px;
+		height: 50px;
+		background: #3498db;
+		border-radius: 50%;
+		color: #fff;
+
+		i {
+			display: block;
+			font-size: 2em;
+		}
+	}
+
+	&__date {
+		width: $date * 1px;
+		text-align: right;
+		flex-shrink: 0;
+		flex-grow: 0;
+
+		p {
+			font-size: 1.6em;
+			color: #374054;
+			font-family: variables.$ff-lato-light;
+		}
+	}
+
+	&__description {
+		box-sizing: border-box;
+		padding: 15px;
+		width: math.div($description, $mw) * 100%;
+		background: #fff;
+		border: 1px solid #e6e6e6;
+		border-radius: 3px;
+
+		h3 {
+			margin: 0;
+			color: #374054;
+		}
+
+		h4 {
+			margin: 0 0 15px 0;
+			color: #7e8890;
+		}
+
+		p,
+		li {
+			margin: 0;
+			color: #74808a;
+		}
+	}
+}

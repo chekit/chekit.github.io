@@ -1,0 +1,6 @@
+@use './../tools/placeholders';
+
+#skills {
+	@extend %white-section;
+	@extend %no-border-bottom;
+}

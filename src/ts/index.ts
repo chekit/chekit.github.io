@@ -1,6 +1,7 @@
-import ScrollTo from './scrollto'; 
+import './../scss/index.scss';
+import ScrollTo from './scrollto';
 
 document.addEventListener('DOMContentLoaded', () => {
-	// Init Scroll To Target Module
-	new ScrollTo();
+  // Init Scroll To Target Module
+  new ScrollTo();
 });

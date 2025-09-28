@@ -1,11 +1,13 @@
 {
   "name": "chekit-portfolio",
-  "version": "2.0.0",
-  "description": "second variant of my portfolio site",
+  "version": "3.0.0",
+  "description": "Third variant of my portfolio site",
   "main": "dist/index.html",
   "scripts": {
-    "start": "gulp dev",
-    "build": "gulp build"
+    "preinstall": "npx only-allow pnpm",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -22,38 +24,20 @@
   },
   "homepage": "https://github.com/chekit/chekit.github.io#readme",
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-preset-env": "^1.7.0",
-    "babelify": "^8.0.0",
-    "browser-sync": "^2.18.12",
-    "browserify": "^16.5.0",
-    "child_process": "^1.0.2",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-cache": "^1.1.3",
-    "gulp-csso": "^4.0.1",
-    "gulp-debug": "^4.0.0",
-    "gulp-eslint": "^6.0.0",
-    "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-pug": "^4.0.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-typescript": "^5.0.1",
-    "gulp-uglify": "^3.0.0",
-    "gulp-watch": "^5.0.1",
-    "require-dir": "^1.2.0",
-    "tsify": "^4.0.0",
-    "typescript": "^3.7.2",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^2.0.0"
+    "@types/node": "^24.5.2",
+    "@vituum/vite-plugin-pug": "^1.1.0",
+    "eslint": "^9.35.0",
+    "path": "^0.12.7",
+    "prettier": "^3.6.2",
+    "sass-embedded": "^1.92.1",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.44.0",
+    "vite": "^7.1.6",
+    "vite-plugin-pug": "^0.4.1"
   },
   "dependencies": {
     "modernizr": "^3.6.0",
-    "normalize-scss": "^7.0.0",
+    "normalize-scss": "^8.0.0",
     "smoothscroll-polyfill": "^0.4.0"
   },
   "private": true

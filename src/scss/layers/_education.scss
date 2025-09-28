@@ -1,0 +1,5 @@
+@use './../tools/placeholders';
+
+#education {
+	@extend %white-section;
+}

@@ -1,0 +1,44 @@
+@use './../tools/variables';
+
+.tag-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+    list-style-type: none;
+    font-size: variables.$m-basic-fsz;
+}
+
+.tag {
+    display: inline-block;
+    margin: 7px;
+    padding: 5px 10px;
+    background-color: #e4e4ea;
+    border-radius: 2px;
+    color: #374054;
+    list-style: none;
+    cursor: default;
+    font-size: 1.2em;
+    transition: all .15s ease-in-out;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+.is-advanced {
+    background-color: #53b380;
+    color: #f3f3f3;
+}
+
+.is-intermediate {
+    background-color: rgb(42, 153, 187);
+    color: #f3f3f3;
+}
+
+.is-basic {
+    background-color: #de6053;
+    color: #f3f3f3;
+}

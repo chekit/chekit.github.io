@@ -1,0 +1,47 @@
+@use './../tools/variables';
+
+.links-list {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin: 0 variables.$m-basic-padding 0 0;
+		text-align: center;
+		font-size: 2.1rem;
+		color: variables.$c-p;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		color: inherit;
+		transition: all .35s ease-in-out;
+
+		.fab {
+			transition: all .25s ease-in-out;
+		}
+
+		&:hover {
+			.fa-stack-overflow {
+				color: variables.$c-stackoverflow;
+			}
+
+			.fa-github {
+				color: variables.$c-github;
+			}
+
+			.fa-linkedin {
+				color: variables.$c-linkedin;
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+extends src/pug/base/tmpl
+
+//- This block will be injected to basic tmpl
+block content
+	include src/pug/layers/index
+
+//- This block will be injected to basic tmpl
+block scripts
+	//- script(src="js/scripts.min.js", defer)
+	script(type="module" src="src/ts/index.ts")

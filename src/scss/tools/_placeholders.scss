@@ -1,0 +1,26 @@
+@use 'variables';
+
+%section {
+	border-bottom: 1px solid variables.$c-section-border;
+
+	.wrapper {
+		margin: 0 auto;
+		max-width: variables.$m-section-mw;
+	}
+}
+
+%white-section {
+	@extend %section;
+
+	background-color: variables.$c-white-section-bg;
+}
+
+%grey-section {
+	@extend %white-section;
+
+	background-color: variables.$c-grey-section-bg
+}
+
+%no-border-bottom {
+	border-bottom: none;
+}

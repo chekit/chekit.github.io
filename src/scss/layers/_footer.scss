@@ -1,0 +1,18 @@
+@use './../tools/variables';
+@use './../tools/placeholders';
+
+#footer {
+	@extend %white-section;
+	@extend %no-border-bottom;
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: variables.$m-section-mw--experience;
+	}
+
+	.copyright {
+		white-space: nowrap;
+	}
+}

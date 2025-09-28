@@ -1,0 +1,11 @@
+/*** Font Awesome ***/
+$fa-font-path: 'fonts/font-awesome';
+
+@use 'font-awesome/fa-brands';
+@use 'font-awesome/fa-regular';
+@use 'font-awesome/fa-solid';
+@use 'font-awesome/fontawesome';
+/*** /Font Awesome ***/
+
+@use 'variables';
+@use 'placeholders';

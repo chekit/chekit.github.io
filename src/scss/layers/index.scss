@@ -1,0 +1,18 @@
+@use 'main';
+@use 'about';
+@use 'experience';
+@use 'education';
+@use 'projects';
+@use 'skills';
+@use 'contacts';
+@use 'footer';
+
+.align-center {
+	text-align: center;
+}
+
+.body {
+	&>p {
+		margin: 0 0 1em;
+	}
+}
