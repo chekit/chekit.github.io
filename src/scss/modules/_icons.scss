@@ -3,14 +3,14 @@
 		display: inline-block;
 		vertical-align: middle;
 		width: 32px;
-		height: 32px;	
-		background: transparent url('../images/icons/habrahabr-32x32.png') 50% 50% no-repeat;
+		height: 32px;
+		background: transparent url('images/icons/habrahabr-32x32.png') 50% 50% no-repeat;
 		background-size: contain;
 		text-decoration: none;
 		transition: all .25s ease-in-out;
 		filter: grayscale(100%);
 		cursor: pointer;
-		  
+
 		&:hover {
 			filter: grayscale(0);
 		}
