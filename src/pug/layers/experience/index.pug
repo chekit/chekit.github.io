@@ -1,9 +1,15 @@
-//- === Rabobank ===
+//- === Rabobank 2025 ===
 - var rabobank = {}
-- rabobank.period = 'November 2021';
+- rabobank.period = 'September 2025';
 - rabobank.employer = 'Rabobank';
 - rabobank.job = 'Senior Front-End Developer';
-- rabobank.description = 'Part of SYS DIS Sales & Client Processes team.';
+- rabobank.description = 'Part of the <strong>Platform team</strong>. Focused on improving internal tooling, streamlining application delivery processes, and supporting engineering teams in building, deploying, and maintaining scalable applications.';
+//- === Rabobank 2021-2025 ===
+- var rabobank_1 = {}
+- rabobank_1.period = 'November 2021 - September 2025';
+- rabobank_1.employer = 'Rabobank';
+- rabobank_1.job = 'Senior Front-End Developer';
+- rabobank_1.description = 'Part of the <strong>Product team</strong>. Responsible for features that are related to the online communication channels. Participating in a cross team projects by helping to increase the delivery pace and code quality.';
 //- === ZyLAB ===
 - var zylab = {}
 - zylab.period = 'October 2019 - November 2019';
@@ -85,7 +91,7 @@
 - freelance.period = '';
 - freelance.employer = 'Freelance';
 - freelance.job = 'Frontent Developer';
-- freelance.description = 'Occasionally I\'ve done some projects as a freelancer. Mostly this projects needed a markup from PSD to HTML, CSS and some basic coding for effects, popup, forms validation and sending/fetching data to/from server.';
+- freelance.description = 'Occasionally, I\'ve worked on projects as a freelancer. Most of these projects involved converting PSD designs into HTML and CSS, along with basic coding for animations, pop-ups, form validation, and handling data exchange with the server.';
 - freelance.projects = [];
 //- VARIANT
 //- - var variant = {};
@@ -99,20 +105,20 @@
 - znak.name = 'Pages for <a href="http://znakachestva.ru/">"Znak Kachestva"</a>';
 - znak.image = null;
 - znak.description = [];
-- znak.description.push('For that project I\'ve prepared layouts using Pug and Scss, made some coding for interactive parts using jQuery.');
+- znak.description.push('For that project, I prepared layouts using Pug and SCSS, and implemented interactive features using jQuery.');
 - znak.techstack = ['Pug', 'Scss', 'jQuery', 'Gulp'];
 - freelance.projects.push(znak);
 //- OPEN-AIR SALE
-- var openair = {};
-- openair.name = 'Promo pages for <a href="http://www.spletnik.ru/vremenagoda">"Open Air Sale"</a>';
-- openair.description = [];
-- openair.description.push('For that project I\'ve prepared layouts using Pug and Scss, made some coding for interactive parts using jQuery.');
-- openair.techstack = ['Pug', 'Scss', 'jQuery', 'Gulp', 'Babel', 'SMACSS'];
-- freelance.projects.push(openair);
+//- - var openair = {};
+//- - openair.name = 'Promo pages for <a href="http://www.spletnik.ru/vremenagoda">"Open Air Sale"</a>';
+//- - openair.description = [];
+//- - openair.description.push('For that project, I prepared layouts using Pug and SCSS, and implemented interactive features using jQuery.');
+//- - openair.techstack = ['Pug', 'Scss', 'jQuery', 'Gulp', 'Babel', 'SMACSS'];
+//- - freelance.projects.push(openair);
 
 section#experience
 	.wrapper
 		.heading
 			h2 Experience
 		.body
-			+job([rabobank, zylab, solit, immo, loftschool, nbz, starmedia, freelance])
+			+job([rabobank, rabobank_1, zylab, solit, immo, loftschool, nbz, starmedia, freelance])

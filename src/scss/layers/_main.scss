@@ -12,7 +12,7 @@
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: rgba(3, 108, 160, 0.72) url('/images/intro-bg_2.jpg') 50% 50% no-repeat;
+    background: rgba(3, 108, 160, 0.72) url('/images/hero_image.png') 50% 50% no-repeat;
     background-attachment: fixed;
     background-size: cover;
     font-size: 2.1rem;
@@ -41,7 +41,7 @@
         font-family: variables.$ff-lato-black;
         text-transform: uppercase;
         color: #052c48;
-        text-shadow: 0 0 2px rgba(255, 255, 255, 1);
+        text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
     }
 
     &__position {
@@ -49,7 +49,8 @@
         line-height: 1;
         font-size: variables.$m-main-h2-size-desktop;
         font-family: variables.$ff-lato-semibold;
-        color: #005077;
+        color: #004060;
+        text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
     }
 }
 
