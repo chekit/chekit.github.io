@@ -18,6 +18,13 @@
     font-size: 2.1rem;
 }
 
+// Source: https: //wojtek.im/journal/targeting-safari-with-css-media-query
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+    #intro {
+        background-attachment: initial;
+    }
+}
+
 .info {
     position: relative;
     width: 100%;
