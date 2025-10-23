@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/chekit/chekit.github.io#readme",
   "devDependencies": {
-    "@types/node": "^24.8.1",
+    "@types/node": "^24.9.1",
     "@vituum/vite-plugin-pug": "^1.1.0",
     "eslint": "^9.38.0",
     "path": "^0.12.7",
