@@ -31,7 +31,7 @@
     "prettier": "^3.6.2",
     "sass-embedded": "^1.92.1",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.1",
+    "typescript-eslint": "^8.46.2",
     "vite": "^7.1.11",
     "vite-plugin-pug": "^0.4.1"
   },
