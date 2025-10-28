@@ -43,8 +43,8 @@ importers:
         specifier: ^8.46.2
         version: 8.46.2(eslint@9.38.0)(typescript@5.9.3)
       vite:
-        specifier: ^7.1.11
-        version: 7.1.11(@types/node@24.9.1)(sass-embedded@1.93.2)(sass@1.93.2)
+        specifier: ^7.1.12
+        version: 7.1.12(@types/node@24.9.1)(sass-embedded@1.93.2)(sass@1.93.2)
       vite-plugin-pug:
         specifier: ^0.4.1
         version: 0.4.1
@@ -1507,8 +1507,8 @@ packages:
       yaml:
         optional: true
 
-  vite@7.1.11:
-    resolution: {integrity: sha512-uzcxnSDVjAopEUjljkWh8EIrg6tlzrjFUfMcR1EVsRDGwf/ccef0qQPRyOrROwhrTDaApueq+ja+KLPlzR/zdg==}
+  vite@7.1.12:
+    resolution: {integrity: sha512-ZWyE8YXEXqJrrSLvYgrRP7p62OziLW7xI5HYGWFzOvupfAlrLvURSzv/FyGyy0eidogEM3ujU+kUG1zuHgb6Ug==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -2914,7 +2914,7 @@ snapshots:
       sass: 1.93.2
       sass-embedded: 1.93.2
 
-  vite@7.1.11(@types/node@24.9.1)(sass-embedded@1.93.2)(sass@1.93.2):
+  vite@7.1.12(@types/node@24.9.1)(sass-embedded@1.93.2)(sass@1.93.2):
     dependencies:
       esbuild: 0.25.11
       fdir: 6.5.0(picomatch@4.0.3)
