@@ -103,10 +103,36 @@
 		&-link {
 			@extend .project__info-description;
 
+			position: relative;
+			align-self: center;
 			color: variables.$c-a;
 			font-size: math.div(16, 14) * 1em;
+			cursor: pointer;
+
+			&:hover {
+				color: white;
+			}
+
+			&:after {
+				position: absolute;
+				bottom: 0px;
+				left: -2px;
+				z-index: 1;
+				padding: 2px;
+				width: 100%;
+				height: 0;
+				background-color: #3498db;
+				transition: height .3s ease-in-out;
+				content: ''
+			}
+
+			&:hover:after {
+				height: math.div(16, 14) * 1em;
+			}
 
 			a {
+				position: relative;
+				z-index: 2;
 				display: inline-block;
 				margin: 0 variables.$m-basic-padding;
 				color: inherit;
@@ -120,11 +146,6 @@
 
 				&:last-child {
 					margin-right: 0;
-				}
-
-				&:hover {
-					color: variables.$c-a--hover;
-					border-bottom-color: variables.$c-a--hover;
 				}
 			}
 		}
