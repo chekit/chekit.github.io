@@ -25,11 +25,13 @@ $ff-lato-black: 'LatoWebBlack', Arial, "Helvetica Neue", Helvetica, sans-serif;
 $ff-lato-hairline: 'LatoWebHairline', Arial, "Helvetica Neue", Helvetica, sans-serif;
 $ff-lato: 'LatoWeb', Arial, "Helvetica Neue", Helvetica, sans-serif;
 $ff-calibri: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$ff-impact: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 /*** Measures ***/
 $m-basic-padding: 15px;
 $m-basic-fsz: 1.6rem;
 
+$m-main-h1-size-desktop--name: math.div(82, 21) * 1em;
 $m-main-h1-size-desktop: math.div(60, 21) * 1em;
 $m-main-h2-size-desktop: math.div(32, 21) * 1em;
 $m-main-h1-size-mobile: math.div(30, 21) * 1em;
