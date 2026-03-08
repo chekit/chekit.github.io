@@ -24,15 +24,15 @@
   },
   "homepage": "https://github.com/chekit/chekit.github.io#readme",
   "devDependencies": {
-    "@types/node": "^25.0.3",
+    "@types/node": "^25.3.3",
     "@vituum/vite-plugin-pug": "^1.1.0",
     "eslint": "^9.39.2",
     "path": "^0.12.7",
-    "prettier": "^3.7.4",
-    "sass-embedded": "^1.97.3",
+    "prettier": "^3.8.1",
+    "sass-embedded": "^1.97.2",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.52.0",
-    "vite": "^7.3.0",
+    "vite": "^7.3.1",
     "vite-plugin-pug": "^0.4.1"
   },
   "dependencies": {
