@@ -33,7 +33,7 @@
     "sass-embedded": "^1.99.0",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.59.1",
-    "vite": "^8.0.10",
+    "vite": "^8.0.11",
     "vite-plugin-pug": "^0.4.1"
   },
   "dependencies": {
