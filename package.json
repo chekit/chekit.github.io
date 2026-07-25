@@ -29,7 +29,7 @@
     "@vituum/vite-plugin-pug": "^2.0.0",
     "eslint": "^10.7.0",
     "path": "^0.12.7",
-    "prettier": "^3.9.5",
+    "prettier": "^3.9.6",
     "sass-embedded": "^1.100.0",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.65.0",
