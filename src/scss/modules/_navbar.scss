@@ -32,10 +32,10 @@
 		gap: 8px;
 		font-family: variables.$ff-mono;
 		font-size: 1.8rem;
-		font-weight: 900;
+		font-weight: 700;
 		color: variables.$text-primary;
 		text-decoration: none;
-		letter-spacing: -0.05em;
+		letter-spacing: -0.03em;
 		transition: all 0.2s ease;
 
 		.brand-accent {
@@ -60,7 +60,7 @@
 	&__nav {
 		display: flex;
 		align-items: center;
-		gap: 28px;
+		gap: 22px;
 
 		@media screen and (max-width: 860px) {
 			display: none;

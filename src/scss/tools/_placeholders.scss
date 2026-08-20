@@ -18,7 +18,7 @@
 	}
 }
 
-%glass-card {
+%surface-card {
 	background: variables.$bg-card;
 	border: 1px solid variables.$border-subtle;
 	border-radius: variables.$radius-md;
@@ -31,6 +31,10 @@
 		box-shadow: variables.$shadow-card-hover;
 		transform: translateY(-2px);
 	}
+}
+
+%glass-card {
+	@extend %surface-card;
 }
 
 %tech-badge {
