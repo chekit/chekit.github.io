@@ -3,7 +3,7 @@
 %section {
 	position: relative;
 	width: 100%;
-	padding: 100px variables.$m-basic-padding;
+	padding: 130px variables.$m-basic-padding;
 	box-sizing: border-box;
 
 	@media screen and (max-width: 780px) {
@@ -20,15 +20,14 @@
 
 %glass-card {
 	background: variables.$bg-card;
-	backdrop-filter: blur(16px);
-	-webkit-backdrop-filter: blur(16px);
 	border: 1px solid variables.$border-subtle;
 	border-radius: variables.$radius-md;
 	box-shadow: variables.$shadow-card;
-	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.3s ease;
 
 	&:hover {
-		border-color: variables.$border-glow;
+		border-color: variables.$text-primary;
+		background: variables.$bg-card-hover;
 		box-shadow: variables.$shadow-card-hover;
 		transform: translateY(-2px);
 	}

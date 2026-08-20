@@ -10,23 +10,24 @@
 	font-size: 1.4rem;
 	font-weight: 600;
 	text-decoration: none;
-	border-radius: variables.$radius-sm;
+	border-radius: 0;
 	cursor: pointer;
 	transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 	border: 1px solid transparent;
 	outline: none;
-	white-space: nowrap;
+	white-space: normal;
+	text-align: center;
 
 	&-primary {
-		background: linear-gradient(135deg, variables.$accent-cyan, variables.$accent-blue);
-		color: #060d17;
+		background: variables.$accent-cyan;
+		color: variables.$text-primary;
 		font-weight: 700;
-		box-shadow: 0 4px 20px rgba(0, 240, 255, 0.35);
+		box-shadow: 5px 5px 0 variables.$text-primary;
 
 		&:hover {
-			color: #060d17;
-			box-shadow: 0 6px 25px rgba(0, 240, 255, 0.55);
-			transform: translateY(-2px);
+			color: variables.$text-primary;
+			box-shadow: 2px 2px 0 variables.$text-primary;
+			transform: translate(3px, 3px);
 		}
 
 		&:active {
@@ -35,17 +36,15 @@
 	}
 
 	&-secondary {
-		background: rgba(255, 255, 255, 0.05);
+		background: transparent;
 		border-color: variables.$border-medium;
 		color: variables.$text-primary;
-		backdrop-filter: blur(8px);
 
 		&:hover {
-			color: variables.$accent-cyan;
-			border-color: variables.$border-glow;
-			background: rgba(0, 240, 255, 0.08);
-			box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
-			transform: translateY(-2px);
+			color: variables.$text-primary;
+			border-color: variables.$text-primary;
+			background: variables.$accent-purple;
+			transform: translateY(-3px);
 		}
 
 		&:active {
@@ -66,8 +65,8 @@
 .cv-buttons {
 	display: inline-flex;
 	align-items: center;
-	background: rgba(255, 255, 255, 0.04);
-	border: 1px solid variables.$border-subtle;
+	background: transparent;
+	border: 1px solid variables.$border-medium;
 	border-radius: variables.$radius-sm;
 	padding: 4px;
 	gap: 4px;
@@ -75,7 +74,7 @@
 	&__label {
 		font-family: variables.$ff-mono;
 		font-size: 1.2rem;
-		color: variables.$text-muted;
+		color: variables.$text-secondary;
 		padding: 0 8px;
 	}
 
@@ -87,15 +86,16 @@
 		font-size: 1.2rem;
 		font-weight: 600;
 		color: variables.$text-secondary;
-		background: rgba(255, 255, 255, 0.05);
+		background: variables.$bg-card-hover;
 		border-radius: 4px;
 		text-decoration: none;
+		white-space: nowrap;
 		transition: all 0.2s ease;
 
 		&:hover {
 			color: variables.$text-primary;
-			background: variables.$accent-blue;
-			color: #060d17;
+			background: variables.$accent-cyan;
+			color: variables.$text-primary;
 		}
 	}
 }
@@ -119,7 +119,7 @@
 	z-index: 10;
 
 	&:hover {
-		color: variables.$accent-cyan;
+		color: variables.$accent-blue;
 	}
 
 	&__mouse {
@@ -171,6 +171,7 @@
 		opacity: 1;
 		transform: translateY(0);
 	}
+
 	100% {
 		opacity: 0;
 		transform: translateY(12px);

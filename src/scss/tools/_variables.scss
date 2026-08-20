@@ -1,27 +1,27 @@
 @use 'sass:math';
 
-/*** Modern Tech Dark Theme Colors ***/
-$bg-body: #07090e;
-$bg-body-gradient: radial-gradient(circle at 50% 0%, #0f1c32 0%, #07090e 70%);
-$bg-card: rgba(15, 23, 42, 0.72);
-$bg-card-hover: rgba(26, 38, 66, 0.85);
-$bg-card-solid: #0d131f;
-$bg-navbar: rgba(7, 9, 14, 0.85);
+/*** Ink, paper, and signal palette ***/
+$bg-body: #f1efe7;
+$bg-body-gradient: linear-gradient(135deg, #f8f6ef 0%, #ebe8de 100%);
+$bg-card: rgba(255, 255, 255, 0.62);
+$bg-card-hover: #fffdf6;
+$bg-card-solid: #fffdf6;
+$bg-navbar: rgba(241, 239, 231, 0.9);
 
-$border-subtle: rgba(255, 255, 255, 0.08);
-$border-medium: rgba(255, 255, 255, 0.15);
-$border-glow: rgba(56, 189, 248, 0.35);
+$border-subtle: rgba(17, 19, 21, 0.14);
+$border-medium: rgba(17, 19, 21, 0.3);
+$border-glow: #d5f53b;
 
-$accent-cyan: #00f0ff;
-$accent-blue: #38bdf8;
-$accent-emerald: #10b981;
-$accent-purple: #a855f7;
-$accent-amber: #f59e0b;
+$accent-cyan: #d5f53b;
+$accent-blue: #2d5bff;
+$accent-emerald: #16866b;
+$accent-purple: #ff5b45;
+$accent-amber: #f2a900;
 
-$text-primary: #f8fafc;
-$text-secondary: #94a3b8;
-$text-muted: #64748b;
-$text-accent: #38bdf8;
+$text-primary: #111315;
+$text-secondary: #454944;
+$text-muted: #74786f;
+$text-accent: #2d5bff;
 
 /*** Brand Colors ***/
 $c-github: #f0f6fc;
@@ -30,24 +30,24 @@ $c-stackoverflow: #f48225;
 $c-habr: #65a3be;
 
 /*** Fonts ***/
-$ff-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$ff-sans: 'LatoWeb', 'Lato', sans-serif;
 $ff-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
 /*** Measures & Spacing ***/
 $m-basic-padding: 16px;
 $m-basic-fsz: 1.6rem;
-$m-section-mw: 1120px;
+$m-section-mw: 1180px;
 $m-navbar-height: 70px;
 
 /*** Radius ***/
-$radius-sm: 6px;
-$radius-md: 12px;
-$radius-lg: 18px;
+$radius-sm: 0;
+$radius-md: 0;
+$radius-lg: 0;
 $radius-full: 9999px;
 
 /*** Shadows & Glows ***/
-$glow-cyan: 0 0 25px rgba(0, 240, 255, 0.2);
-$glow-blue: 0 0 25px rgba(56, 189, 248, 0.25);
-$glow-emerald: 0 0 20px rgba(16, 185, 129, 0.25);
-$shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 1px 1px $border-subtle;
-$shadow-card-hover: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 20px rgba(56, 189, 248, 0.2);
+$glow-cyan: 0 0 0 transparent;
+$glow-blue: 8px 8px 0 $accent-blue;
+$glow-emerald: 8px 8px 0 $accent-emerald;
+$shadow-card: 6px 6px 0 rgba(17, 19, 21, 0.14);
+$shadow-card-hover: 8px 8px 0 $accent-blue;

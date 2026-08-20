@@ -7,15 +7,15 @@
 	overflow: hidden;
 	width: 100%;
 	max-width: 520px;
-	box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(56, 189, 248, 0.15);
-	border: 1px solid rgba(255, 255, 255, 0.12);
+	box-shadow: 7px 7px 0 variables.$text-primary;
+	border: 1px solid variables.$text-primary;
 
 	&__header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding: 12px 18px;
-		background: rgba(0, 0, 0, 0.4);
+		background: variables.$text-primary;
 		border-bottom: 1px solid variables.$border-subtle;
 	}
 
@@ -33,9 +33,11 @@
 			&.btn-close {
 				background-color: #ef4444;
 			}
+
 			&.btn-minimize {
 				background-color: #f59e0b;
 			}
+
 			&.btn-maximize {
 				background-color: #10b981;
 			}
@@ -45,14 +47,14 @@
 	&__title {
 		font-family: variables.$ff-mono;
 		font-size: 1.2rem;
-		color: variables.$text-muted;
+		color: variables.$bg-body;
 		letter-spacing: -0.02em;
 	}
 
 	&__status {
 		font-family: variables.$ff-mono;
 		font-size: 1.1rem;
-		color: variables.$accent-emerald;
+		color: variables.$accent-cyan;
 		display: flex;
 		align-items: center;
 		gap: 5px;
@@ -61,7 +63,7 @@
 			content: '';
 			width: 6px;
 			height: 6px;
-			background: variables.$accent-emerald;
+			background: variables.$accent-cyan;
 			border-radius: 50%;
 		}
 	}
@@ -71,7 +73,7 @@
 		font-family: variables.$ff-mono;
 		font-size: 1.35rem;
 		line-height: 1.7;
-		background: rgba(8, 12, 22, 0.85);
+		background: #1a1d1c;
 		overflow-x: auto;
 	}
 
@@ -83,37 +85,37 @@
 
 	/* Syntax Highlights */
 	.tok-keyword {
-		color: #f472b6; /* pink */
+		color: #ff8b7b;
 		font-weight: 600;
 	}
 
 	.tok-var {
-		color: #60a5fa; /* blue */
+		color: #8ea7ff;
 	}
 
 	.tok-prop {
-		color: #93c5fd; /* light blue */
+		color: #d5f53b;
 	}
 
 	.tok-str {
-		color: #34d399; /* emerald green */
+		color: #8fe6b9;
 	}
 
 	.tok-num {
-		color: #fbbf24; /* amber */
+		color: #ffc75a;
 	}
 
 	.tok-bool {
-		color: #c084fc; /* purple */
+		color: #db9cff;
 	}
 
 	.tok-comment {
-		color: #64748b; /* slate gray */
+		color: #89918d;
 		font-style: italic;
 	}
 
 	.tok-punct {
-		color: #94a3b8;
+		color: #c7cec8;
 	}
 
 	.cursor-blink {
@@ -128,9 +130,12 @@
 }
 
 @keyframes blink {
-	0%, 100% {
+
+	0%,
+	100% {
 		opacity: 1;
 	}
+
 	50% {
 		opacity: 0;
 	}

@@ -1,6 +1,22 @@
 @use './../tools/variables';
 @use 'sass:math';
 
+@font-face {
+	font-family: 'LatoWeb';
+	src: url('/fonts/lato/Lato-Regular.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 400;
+	display: swap;
+}
+
+@font-face {
+	font-family: 'LatoWeb';
+	src: url('/fonts/lato/Lato-Heavy.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 900;
+	display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -8,9 +24,10 @@
 }
 
 html {
-	font-size: 62.5%; /* 1rem = 10px */
+	font-size: 62.5%;
+	/* 1rem = 10px */
 	scroll-behavior: smooth;
-	color-scheme: dark;
+	color-scheme: light;
 }
 
 body {
@@ -23,20 +40,20 @@ body {
 	line-height: 1.6;
 	color: variables.$text-primary;
 	background-color: variables.$bg-body;
-	background-image: 
-		radial-gradient(circle at 15% 15%, rgba(0, 240, 255, 0.05) 0%, transparent 40%),
-		radial-gradient(circle at 85% 65%, rgba(168, 85, 247, 0.05) 0%, transparent 40%),
-		radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.04) 0%, transparent 45%),
-		linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-	background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
-	background-position: 0 0, 0 0, 0 0, -1px -1px, -1px -1px;
+	background-image: linear-gradient(rgba(17, 19, 21, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(17, 19, 21, 0.045) 1px, transparent 1px);
+	background-size: 32px 32px;
+	background-position: -1px -1px;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	margin-top: 0;
 	color: variables.$text-primary;
 	font-weight: 700;
@@ -60,11 +77,12 @@ a {
 	transition: color 0.2s ease;
 
 	&:hover {
-		color: variables.$accent-cyan;
+		color: variables.$accent-blue;
 	}
 }
 
-code, pre {
+code,
+pre {
 	font-family: variables.$ff-mono;
 }
 
@@ -78,11 +96,11 @@ code, pre {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: rgba(255, 255, 255, 0.15);
+	background: rgba(17, 19, 21, 0.25);
 	border-radius: variables.$radius-full;
 
 	&:hover {
-		background: variables.$accent-blue;
+		background: variables.$accent-purple;
 	}
 }
 

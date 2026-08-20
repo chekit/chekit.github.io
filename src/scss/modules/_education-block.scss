@@ -24,7 +24,7 @@
 	&__date {
 		font-family: variables.$ff-mono;
 		font-size: 1.2rem;
-		color: variables.$accent-cyan;
+		color: variables.$accent-blue;
 	}
 
 	&__title {
@@ -61,7 +61,7 @@
 		gap: 4px;
 
 		&:hover {
-			color: variables.$accent-cyan;
+			color: variables.$accent-blue;
 			text-decoration: underline;
 		}
 	}

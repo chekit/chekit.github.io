@@ -14,8 +14,8 @@
 		gap: 30px;
 		max-width: 800px;
 		margin: 0 auto;
-		border: 1px solid rgba(0, 240, 255, 0.25);
-		box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 240, 255, 0.1);
+		border: 1px solid variables.$text-primary;
+		box-shadow: variables.$shadow-card;
 
 		@media screen and (max-width: 600px) {
 			padding: 35px 20px;
@@ -27,9 +27,9 @@
 			gap: 8px;
 			padding: 6px 14px;
 			border-radius: variables.$radius-full;
-			background: rgba(56, 189, 248, 0.1);
-			border: 1px solid rgba(56, 189, 248, 0.3);
-			color: variables.$accent-cyan;
+			background: variables.$accent-cyan;
+			border: 1px solid variables.$text-primary;
+			color: variables.$text-primary;
 			font-family: variables.$ff-mono;
 			font-size: 1.2rem;
 		}
@@ -59,7 +59,7 @@
 			align-items: center;
 			gap: 12px;
 			padding: 8px 12px 8px 20px;
-			background: rgba(0, 0, 0, 0.5);
+			background: variables.$text-primary;
 			border: 1px solid variables.$border-medium;
 			border-radius: variables.$radius-md;
 			max-width: 100%;
@@ -79,6 +79,18 @@
 			color: variables.$accent-cyan;
 			letter-spacing: 0.02em;
 			word-break: break-all;
+		}
+
+		&__email-box .btn-secondary {
+			background: variables.$accent-cyan;
+			border-color: variables.$accent-cyan;
+			color: variables.$text-primary;
+
+			&:hover {
+				background: variables.$accent-purple;
+				border-color: variables.$accent-purple;
+				color: variables.$text-primary;
+			}
 		}
 
 		&__details {

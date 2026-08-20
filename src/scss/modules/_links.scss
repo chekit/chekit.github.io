@@ -23,7 +23,7 @@
 		width: 44px;
 		height: 44px;
 		border-radius: variables.$radius-md;
-		background: rgba(255, 255, 255, 0.04);
+		background: variables.$bg-card-hover;
 		border: 1px solid variables.$border-subtle;
 		color: variables.$text-secondary;
 		text-decoration: none;
@@ -37,10 +37,10 @@
 		}
 
 		&:hover {
-			color: #fff;
+			color: variables.$text-primary;
 			transform: translateY(-3px);
 			border-color: variables.$border-glow;
-			background: rgba(0, 240, 255, 0.08);
+			background: variables.$accent-cyan;
 			box-shadow: 0 4px 15px rgba(0, 240, 255, 0.25);
 
 			svg {
@@ -48,8 +48,8 @@
 			}
 
 			&.github {
-				color: #fff;
-				border-color: rgba(255, 255, 255, 0.4);
+				color: variables.$text-primary;
+				border-color: variables.$text-primary;
 				box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 			}
 

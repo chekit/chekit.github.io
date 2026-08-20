@@ -66,7 +66,7 @@
 		border-radius: 50%;
 		background: variables.$bg-body;
 		border: 2px solid variables.$accent-cyan;
-		box-shadow: 0 0 12px variables.$accent-cyan;
+		box-shadow: 0 0 12px variables.$accent-blue;
 		z-index: 5;
 
 		@media screen and (min-width: 860px) {
@@ -75,7 +75,7 @@
 
 		&.is-current {
 			background: variables.$accent-emerald;
-			border-color: #fff;
+			border-color: variables.$text-primary;
 			box-shadow: 0 0 16px variables.$accent-emerald;
 			animation: pulse-node 2s infinite ease-in-out;
 		}
@@ -97,17 +97,17 @@
 	}
 
 	&.is-highlight {
-		border-color: rgba(0, 240, 255, 0.4);
-		background: rgba(15, 28, 54, 0.85);
+		border-color: variables.$accent-blue;
+		background: rgba(213, 245, 59, 0.16);
 
 		&::before {
 			content: 'CURRENT ROLE';
 			position: absolute;
-			top: -10px;
+			top: 16px;
 			right: 20px;
 			padding: 2px 10px;
 			background: variables.$accent-emerald;
-			color: #060d17;
+			color: variables.$text-primary;
 			font-family: variables.$ff-mono;
 			font-size: 1rem;
 			font-weight: 700;
@@ -129,7 +129,7 @@
 		gap: 6px;
 		font-family: variables.$ff-mono;
 		font-size: 1.2rem;
-		color: variables.$accent-cyan;
+		color: variables.$accent-blue;
 		letter-spacing: -0.01em;
 	}
 
@@ -205,10 +205,13 @@
 }
 
 @keyframes pulse-node {
-	0%, 100% {
+
+	0%,
+	100% {
 		transform: translate(-50%, 0) scale(1);
 		box-shadow: 0 0 12px variables.$accent-emerald;
 	}
+
 	50% {
 		transform: translate(-50%, 0) scale(1.25);
 		box-shadow: 0 0 20px variables.$accent-emerald;

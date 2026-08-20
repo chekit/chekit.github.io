@@ -22,8 +22,8 @@
 		height: 240px;
 		border-radius: 20px;
 		overflow: hidden;
-		border: 2px solid rgba(255, 255, 255, 0.15);
-		background: #0d131f;
+		border: 2px solid variables.$text-primary;
+		background: variables.$text-primary;
 		z-index: 1;
 		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 
@@ -56,7 +56,7 @@
 		align-items: center;
 		gap: 6px;
 		padding: 6px 14px;
-		background: #0f172a;
+		background: variables.$bg-card-hover;
 		border: 1px solid variables.$accent-cyan;
 		border-radius: variables.$radius-full;
 		font-family: variables.$ff-mono;
