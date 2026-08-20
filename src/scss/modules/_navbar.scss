@@ -13,7 +13,7 @@
 
 	&.is-scrolled {
 		border-bottom-color: variables.$border-medium;
-		box-shadow: 0 4px 0 variables.$accent-cyan;
+		box-shadow: 0 1px 0 variables.$accent-cyan;
 	}
 
 	&__container {
@@ -39,7 +39,7 @@
 		transition: all 0.2s ease;
 
 		.brand-accent {
-			color: variables.$accent-blue;
+			color: variables.$accent-cyan;
 		}
 
 		.brand-dot {
@@ -83,7 +83,7 @@
 			left: 0;
 			width: 0;
 			height: 2px;
-			background: variables.$accent-purple;
+			background: variables.$accent-cyan;
 			transition: width 0.25s ease;
 			border-radius: 2px;
 		}
@@ -98,7 +98,7 @@
 		}
 
 		&.is-active {
-			color: variables.$accent-blue;
+			color: variables.$accent-cyan;
 		}
 	}
 
@@ -120,7 +120,7 @@
 		width: 38px;
 		height: 38px;
 		padding: 6px;
-		background: rgba(255, 255, 255, 0.05);
+		background: variables.$bg-card-hover;
 		border: 1px solid variables.$border-subtle;
 		border-radius: variables.$radius-sm;
 		cursor: pointer;

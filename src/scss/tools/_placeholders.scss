@@ -26,7 +26,7 @@
 	transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.3s ease;
 
 	&:hover {
-		border-color: variables.$text-primary;
+		border-color: variables.$border-medium;
 		background: variables.$bg-card-hover;
 		box-shadow: variables.$shadow-card-hover;
 		transform: translateY(-2px);

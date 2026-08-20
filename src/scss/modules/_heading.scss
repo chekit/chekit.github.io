@@ -16,14 +16,14 @@
 		font-family: variables.$ff-mono;
 		font-size: 1.3rem;
 		font-weight: 600;
-		color: variables.$accent-blue;
+		color: variables.$accent-cyan;
 		margin-bottom: 12px;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 
 		&::before {
 			content: '0';
-			color: variables.$accent-purple;
+			color: variables.$accent-cyan;
 			opacity: 0.7;
 		}
 	}
@@ -41,7 +41,9 @@
 		}
 
 		.highlight {
-			color: variables.$accent-blue;
+			background: linear-gradient(110deg, variables.$accent-cyan 0%, variables.$accent-purple 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
 	}
 

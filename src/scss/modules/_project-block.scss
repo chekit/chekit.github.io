@@ -20,12 +20,12 @@
 		position: relative;
 		width: 100%;
 		height: 205px;
-		background: variables.$accent-cyan;
+		background: linear-gradient(135deg, rgba(221, 0, 49, 0.14), rgba(255, 109, 0, 0.12));
 		overflow: hidden;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		border-bottom: 1px solid variables.$text-primary;
+		border-bottom: 1px solid variables.$border-subtle;
 
 		img {
 			width: 100%;

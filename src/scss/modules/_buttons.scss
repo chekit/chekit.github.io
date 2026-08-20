@@ -10,7 +10,7 @@
 	font-size: 1.4rem;
 	font-weight: 600;
 	text-decoration: none;
-	border-radius: 0;
+	border-radius: variables.$radius-sm;
 	cursor: pointer;
 	transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 	border: 1px solid transparent;
@@ -20,14 +20,14 @@
 
 	&-primary {
 		background: variables.$accent-cyan;
-		color: variables.$text-primary;
+		color: #ffffff;
 		font-weight: 700;
-		box-shadow: 5px 5px 0 variables.$text-primary;
+		box-shadow: 0 6px 14px rgba(221, 0, 49, 0.22);
 
 		&:hover {
-			color: variables.$text-primary;
-			box-shadow: 2px 2px 0 variables.$text-primary;
-			transform: translate(3px, 3px);
+			color: #ffffff;
+			box-shadow: 0 9px 18px rgba(221, 0, 49, 0.28);
+			transform: translateY(-2px);
 		}
 
 		&:active {
@@ -36,15 +36,15 @@
 	}
 
 	&-secondary {
-		background: transparent;
+		background: #ffffff;
 		border-color: variables.$border-medium;
 		color: variables.$text-primary;
 
 		&:hover {
 			color: variables.$text-primary;
 			border-color: variables.$text-primary;
-			background: variables.$accent-purple;
-			transform: translateY(-3px);
+			background: rgba(221, 0, 49, 0.06);
+			transform: translateY(-2px);
 		}
 
 		&:active {
@@ -86,7 +86,7 @@
 		font-size: 1.2rem;
 		font-weight: 600;
 		color: variables.$text-secondary;
-		background: variables.$bg-card-hover;
+		background: #ffffff;
 		border-radius: 4px;
 		text-decoration: none;
 		white-space: nowrap;
@@ -94,7 +94,7 @@
 
 		&:hover {
 			color: variables.$text-primary;
-			background: variables.$accent-cyan;
+			background: rgba(221, 0, 49, 0.08);
 			color: variables.$text-primary;
 		}
 	}
@@ -151,18 +151,18 @@
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
-	background: rgba(255, 255, 255, 0.05);
+	background: variables.$bg-card-hover;
 	border: 1px solid variables.$border-subtle;
 	color: variables.$text-secondary;
 	cursor: pointer;
 	transition: all 0.25s ease;
 
 	&:hover {
-		background: rgba(0, 240, 255, 0.1);
+		background: rgba(221, 0, 49, 0.06);
 		border-color: variables.$accent-cyan;
-		color: variables.$accent-cyan;
+		color: variables.$accent-blue;
 		transform: translateY(-3px);
-		box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+		box-shadow: variables.$shadow-card;
 	}
 }
 

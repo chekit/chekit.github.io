@@ -7,15 +7,16 @@
 	overflow: hidden;
 	width: 100%;
 	max-width: 520px;
-	box-shadow: 7px 7px 0 variables.$text-primary;
-	border: 1px solid variables.$text-primary;
+	box-shadow: variables.$shadow-card;
+	border: 1px solid variables.$border-subtle;
+	border-radius: variables.$radius-lg;
 
 	&__header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding: 12px 18px;
-		background: variables.$text-primary;
+		background: #242629;
 		border-bottom: 1px solid variables.$border-subtle;
 	}
 
@@ -47,7 +48,7 @@
 	&__title {
 		font-family: variables.$ff-mono;
 		font-size: 1.2rem;
-		color: variables.$bg-body;
+		color: #f4f5f6;
 		letter-spacing: -0.02em;
 	}
 
