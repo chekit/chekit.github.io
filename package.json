@@ -8,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "postbuild": "cd dist && mv index.pug.html index.html",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",

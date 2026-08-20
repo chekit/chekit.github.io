@@ -2,17 +2,55 @@
 @use './../tools/placeholders';
 
 #footer {
-	@extend %white-section;
-	@extend %no-border-bottom;
+	position: relative;
+	width: 100%;
+	padding: 40px variables.$m-basic-padding;
+	border-top: 1px solid variables.$border-subtle;
+	background: rgba(5, 7, 11, 0.9);
 
-	.wrapper {
+	.footer-container {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-		max-width: variables.$m-section-mw--experience;
+		justify-content: space-between;
+		gap: 20px;
+		max-width: variables.$m-section-mw;
+		margin: 0 auto;
+		flex-wrap: wrap;
+
+		@media screen and (max-width: 780px) {
+			flex-direction: column;
+			text-align: center;
+			gap: 24px;
+		}
 	}
 
-	.copyright {
-		white-space: nowrap;
+	.footer-info {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+
+		&__copyright {
+			font-size: 1.4rem;
+			color: variables.$text-primary;
+			font-weight: 500;
+			margin: 0;
+		}
+
+		&__tech {
+			font-family: variables.$ff-mono;
+			font-size: 1.2rem;
+			color: variables.$text-muted;
+			margin: 0;
+
+			.tech-highlight {
+				color: variables.$accent-blue;
+			}
+		}
+	}
+
+	.footer-right {
+		display: flex;
+		align-items: center;
+		gap: 20px;
 	}
 }

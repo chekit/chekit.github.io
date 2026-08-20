@@ -1,36 +1,53 @@
 export default class ScrollTo {
-  static init() {
-    new ScrollTo();
+  static init(): ScrollTo {
+    return new ScrollTo();
   }
 
   private readonly SELECTOR: string = '[data-scrollto]';
-  private readonly btnList: NodeListOf<HTMLElement>;
-  private targets: { [id: string]: number } = {};
+  private readonly NAVBAR_OFFSET: number = 70;
 
-  private constructor() {
-    this.btnList = document.querySelectorAll(this.SELECTOR);
-
-    if (this.btnList.length > 0) {
-      setTimeout(() => this.initEventListener(), 300);
-    }
+  constructor() {
+    this.initEventListeners();
   }
 
-  private initEventListener() {
-    Array.prototype.forEach.call(this.btnList, (item: HTMLElement) => {
-      const id: string = item.dataset[`scrollto`] as string;
+  private initEventListeners(): void {
+    const btnList = document.querySelectorAll<HTMLElement>(this.SELECTOR);
+    btnList.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = btn.dataset.scrollto;
+        if (targetId) {
+          this.scrollToTarget(targetId);
+        }
+      });
+    });
 
-      this.saveTargetOffset(id);
-      item.addEventListener('click', () => this.scrollToTarget(id), false);
+    // Also listen to hash links like href="#about"
+    const hashLinks = document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]');
+    hashLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.length > 1) {
+          const targetId = href.substring(1);
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            this.scrollToTarget(targetId);
+          }
+        }
+      });
     });
   }
 
-  private saveTargetOffset(id: string): void {
-    this.targets[id] = (document.getElementById(id) as HTMLElement).offsetTop;
-  }
+  public scrollToTarget(id: string): void {
+    const targetElement = document.getElementById(id);
+    if (!targetElement) return;
 
-  private scrollToTarget(id: string): void {
-    window.scroll({
-      top: this.targets[id] || 0,
+    const elementPosition = targetElement.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - this.NAVBAR_OFFSET;
+
+    window.scrollTo({
+      top: offsetPosition >= 0 ? offsetPosition : 0,
       behavior: 'smooth',
     });
   }

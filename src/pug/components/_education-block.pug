@@ -1,10 +1,18 @@
 mixin education-block(places = [])
-	each place in places
-		.education-block
-			.education-block__heading
-				h3.education-block__h3!= place.title
-				p.education-block__date!= place.period
-				if  place.speciality
-					h4.education-block__h4!= place.speciality
-			if  place.description
-				p.education-block__text!= place.description
+	.education-grid
+		each place in places
+			.education-card.reveal-on-scroll
+				.education-card__header
+					if place.period
+						span.education-card__date
+							svg.svg-icon(viewBox="0 0 24 24", width="13", height="13")
+								path(d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z")
+							!= place.period
+					h3.education-card__title!= place.title
+					if place.speciality
+						h4.education-card__speciality!= place.speciality
+				if place.description
+					p.education-card__text!= place.description
+				if place.link
+					a.education-card__link(href=place.link, target="_blank", rel="noopener noreferrer")
+						| Learn More &rarr;

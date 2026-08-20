@@ -1,0 +1,40 @@
+header.navbar
+	.navbar__container
+		a.navbar__brand(href="#intro")
+			span.brand-dot
+			span &lt;chekit
+			span.brand-accent .dev
+			span  /&gt;
+
+		nav.navbar__nav
+			a.navbar__link(href="#about") // about
+			a.navbar__link(href="#experience") // experience
+			a.navbar__link(href="#skills") // skills
+			a.navbar__link(href="#projects") // projects
+			a.navbar__link(href="#education") // education
+			a.navbar__link(href="#contact") // contact
+
+		.navbar__actions
+			.cv-buttons
+				span.cv-buttons__label CV:
+				a.cv-buttons__link(href="files/cv_cherepov_aa_en.pdf", target="_blank", title="Download English CV") EN
+				a.cv-buttons__link(href="files/cv_cherepov_aa_ru.pdf", target="_blank", title="Download Russian CV") RU
+
+		button.navbar__toggle#navbar-toggle(type="button", aria-label="Toggle navigation menu")
+			span
+			span
+			span
+
+//- Mobile Navigation Drawer
+nav.mobile-nav#mobile-nav
+	a.mobile-nav__link(href="#about") // about
+	a.mobile-nav__link(href="#experience") // experience
+	a.mobile-nav__link(href="#skills") // skills
+	a.mobile-nav__link(href="#projects") // projects
+	a.mobile-nav__link(href="#education") // education
+	a.mobile-nav__link(href="#contact") // contact
+	.mobile-nav__actions
+		.cv-buttons
+			span.cv-buttons__label Download CV:
+			a.cv-buttons__link(href="files/cv_cherepov_aa_en.pdf", target="_blank") EN
+			a.cv-buttons__link(href="files/cv_cherepov_aa_ru.pdf", target="_blank") RU

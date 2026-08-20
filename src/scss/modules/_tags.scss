@@ -1,44 +1,142 @@
 @use './../tools/variables';
 
 .tag-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 800px;
-    list-style-type: none;
-    font-size: variables.$m-basic-fsz;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&--center {
+		justify-content: center;
+	}
 }
 
 .tag {
-    display: inline-block;
-    margin: 7px;
-    padding: 5px 10px;
-    background-color: #e4e4ea;
-    border-radius: 2px;
-    color: #374054;
-    list-style: none;
-    cursor: default;
-    font-size: 1.2em;
-    transition: all .15s ease-in-out;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 14px;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid variables.$border-subtle;
+	border-radius: variables.$radius-full;
+	color: variables.$text-secondary;
+	font-family: variables.$ff-mono;
+	font-size: 1.3rem;
+	font-weight: 500;
+	cursor: default;
+	transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 
-    &:hover {
-        transform: translateY(-2px);
-    }
+	&__dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: variables.$text-muted;
+	}
+
+	&:hover {
+		transform: translateY(-2px);
+		border-color: variables.$border-glow;
+		background: rgba(56, 189, 248, 0.08);
+		color: variables.$text-primary;
+		box-shadow: 0 4px 15px rgba(56, 189, 248, 0.15);
+	}
+
+	&.is-advanced,
+	&.is-expert {
+		border-color: rgba(0, 240, 255, 0.25);
+		color: variables.$text-primary;
+
+		.tag__dot {
+			background-color: variables.$accent-cyan;
+			box-shadow: 0 0 8px variables.$accent-cyan;
+		}
+
+		&:hover {
+			border-color: variables.$accent-cyan;
+			box-shadow: 0 4px 20px rgba(0, 240, 255, 0.3);
+		}
+	}
+
+	&.is-intermediate {
+		border-color: rgba(16, 185, 129, 0.25);
+		color: variables.$text-secondary;
+
+		.tag__dot {
+			background-color: variables.$accent-emerald;
+			box-shadow: 0 0 8px variables.$accent-emerald;
+		}
+
+		&:hover {
+			border-color: variables.$accent-emerald;
+			box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+		}
+	}
+
+	&.is-basic {
+		border-color: rgba(168, 85, 247, 0.25);
+		color: variables.$text-secondary;
+
+		.tag__dot {
+			background-color: variables.$accent-purple;
+			box-shadow: 0 0 8px variables.$accent-purple;
+		}
+
+		&:hover {
+			border-color: variables.$accent-purple;
+			box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
+		}
+	}
+
+	&--sm {
+		padding: 3px 10px;
+		font-size: 1.15rem;
+	}
 }
 
-.is-advanced {
-    background-color: #53b380;
-    color: #f3f3f3;
-}
+/* Skills Group Box */
+.skill-card {
+	padding: 24px;
+	border-radius: variables.$radius-md;
+	background: variables.$bg-card;
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border: 1px solid variables.$border-subtle;
+	transition: all 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 
-.is-intermediate {
-    background-color: rgb(42, 153, 187);
-    color: #f3f3f3;
-}
+	&:hover {
+		border-color: variables.$border-glow;
+		transform: translateY(-4px);
+		box-shadow: variables.$shadow-card-hover;
+	}
 
-.is-basic {
-    background-color: #de6053;
-    color: #f3f3f3;
+	&__header {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 38px;
+		height: 38px;
+		border-radius: variables.$radius-sm;
+		background: rgba(0, 240, 255, 0.08);
+		border: 1px solid rgba(0, 240, 255, 0.2);
+		color: variables.$accent-cyan;
+		font-size: 1.8rem;
+	}
+
+	&__title {
+		margin: 0;
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: variables.$text-primary;
+	}
 }

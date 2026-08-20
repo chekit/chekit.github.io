@@ -1,30 +1,40 @@
 //- MIEM
 - var miem = {};
-- miem.title = 'Moscow Institute of Electronics and Mathematics, MIEM (Technical university)';
-- miem.period = 'Sept 2003 - Sept 2008';
+- miem.title = 'Moscow Institute of Electronics and Mathematics (MIEM)';
+- miem.period = 'Sept 2003 — Sept 2008';
 - miem.speciality = 'System Engineer (Specialist Diploma)';
-- miem.description = 'Russian higher educational institution in the field of electronics, computer engineering, and applied mathematics. Founded in 1962 as Moscow Institute of Electronic Machine Building (Russian: Московский институт электронного машиностроения), in 2011 joined with National Research University Higher School of Economics.';
+- miem.description = 'Comprehensive 5-year engineering education in computer engineering, electronics, system architecture, and applied mathematics.';
 - miem.link = 'https://miem.hse.ru/';
-//- LoftSchool
+
+//- LoftSchool React
 - var loftschool_1 = {};
-- loftschool_1.title = 'React.js Web applications development';
-- loftschool_1.period = 'Aug 2020 - Sep 2020';
-- loftschool_1.description = 'Online course for developers to be more comfortable to develop with ReactJS, Redux, Redux-Saga';
+- loftschool_1.title = 'React.js Web Applications Architecture';
+- loftschool_1.period = 'Aug 2020 — Sep 2020';
+- loftschool_1.speciality = 'Advanced Certification';
+- loftschool_1.description = 'Intensive hands-on program focusing on enterprise React architecture, Redux state management, Redux-Saga side effects, and testing.';
+
 //- Yandex
 - var yandex = {};
 - yandex.title = 'ShRI (School of Interface Development by Yandex)';
-- yandex.period = 'July 2017 - Sept 2017';
-- yandex.description = 'The school is part of Mobilisation project by Yandex that helds designers, managers, mobile developers and frontend developers. I was took a part only in the first round of school and quit of the second round <strong>by my own reasons</strong	>';
-- yandex.link = 'https://miem.hse.ru/';
-//- LoftSchool
+- yandex.period = 'July 2017 — Sept 2017';
+- yandex.speciality = 'Frontend Academy';
+- yandex.description = 'Rigorous interface engineering school by Yandex focusing on browser internals, performance profiling, responsive architecture, and collaborative team delivery.';
+
+//- LoftSchool Full
 - var loftschool_2 = {};
-- loftschool_2.title = 'The complex education of web-development';
-- loftschool_2.period = 'Oct 2014 - Jan 2017';
-- loftschool_2.description = 'Online course for developers and coders by Loftschool';
+- loftschool_2.title = 'Comprehensive Web Development Program';
+- loftschool_2.period = 'Oct 2014 — Jan 2017';
+- loftschool_2.speciality = 'Full Web Stack';
+- loftschool_2.description = 'Extensive professional course in modern JavaScript, HTML5/CSS3 architectures, automated build pipelines, and production deployment.';
 
 section#education
 	.wrapper
-		.heading
-			h2 Education
-		.body
-			+education-block([miem, loftschool_1, yandex, loftschool_2])
+		.section-heading.reveal-on-scroll
+			span.section-heading__tag 05. Education
+			h2.section-heading__title
+				| Education &amp; 
+				span.highlight Certifications
+			p.section-heading__subtitle
+				| Academic foundation and specialized continuous professional education.
+
+		+education-block([miem, loftschool_1, yandex, loftschool_2])

@@ -1,22 +1,25 @@
 - var image_cap = 'images/projects/project_src.png'
-//- - var image_cap = 'constructocat2.jpg'
 
 mixin project(projectsList = [])
-	each project in projectsList
-		if project
-			.project
-				.project__image
-					img.project__image-src(src=`${project.image || image_cap}`)
-				.project__info
-					h3.project__info-name!= project.name
-					if project.description
-						each desc in project.description
-							p.project__info-description!= desc
-					if project.link
-						p.project__info-link
-							each link in project.link
-								a(href=link.href, target="_blank")!=link.title || 'View Project'
-					if project.techstack && project.techstack.length > 0
-						ul.project-tech-list
-							each tech in project.techstack
-								li.project-tech-list__item!= tech
+	.projects-grid
+		each project in projectsList
+			if project
+				.project-card.reveal-on-scroll
+					.project-card__media
+						img(src=`${project.image || image_cap}`, alt=`${project.name} preview`)
+					.project-card__body
+						h3.project-card__title!= project.name
+						if project.description
+							each desc in project.description
+								p.project-card__desc!= desc
+						if project.techstack && project.techstack.length > 0
+							.project-card__tags
+								each tech in project.techstack
+									span.tag.tag--sm!= tech
+						if project.link && project.link.length > 0
+							.project-card__footer
+								each link in project.link
+									a.project-card__link(href=link.href, target="_blank", rel="noopener noreferrer")
+										svg(viewBox="0 0 24 24")
+											path(d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z")
+										!= link.title || 'View Repository'

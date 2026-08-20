@@ -1,12 +1,107 @@
 section#intro
-	.info
-		h1.info__name Anton Cherepov
-		h2.info__position Senior Front-End Developer
-	.download
-		p.download__text Download my CV:
-		p.download__links
-			a.btn-rounded-dark-blue.download__button(href="/files/cv_cherepov_aa_ru.pdf") RUS
-			a.btn-rounded-dark-blue.download__button(href="/files/cv_cherepov_aa_en.pdf") EN
-	.btn-down#next(data-scrollto="about")
-		span
-			i.fa.fa-chevron-down(aria-hidden="true")
+	.wrapper
+		.hero-content.reveal-on-scroll
+			.hero-content__status
+				span.status-dot
+				span Senior Front-End Engineer &bull; Amsterdam Area
+
+			h1.hero-content__title
+				| Anton 
+				span.title-gradient Cherepov
+
+			h2.hero-content__role
+				| Senior Front-End Developer &amp; Platform Engineer
+
+			p.hero-content__bio
+				| Crafting high-performance frontend architectures, internal developer tooling, and scalable enterprise applications with over <strong>15 years</strong> of engineering experience.
+
+			.hero-content__actions
+				a.btn.btn-primary(href="#experience")
+					| View Experience &darr;
+				a.btn.btn-secondary(href="#contact")
+					| Get in Touch &rarr;
+				.cv-buttons
+					span.cv-buttons__label CV:
+					a.cv-buttons__link(href="files/cv_cherepov_aa_en.pdf", target="_blank") EN
+					a.cv-buttons__link(href="files/cv_cherepov_aa_ru.pdf", target="_blank") RU
+
+			.hero-content__tech-strip
+				span.hero-content__tech-strip-label Core Stack:
+				.tag-list
+					span.tag.tag--sm.is-advanced TypeScript
+					span.tag.tag--sm.is-advanced Angular
+					span.tag.tag--sm.is-advanced React.js
+					span.tag.tag--sm.is-advanced Node.js
+					span.tag.tag--sm.is-advanced RxJS
+					span.tag.tag--sm.is-advanced Vite
+
+		.hero-terminal-container.reveal-on-scroll
+			.terminal
+				.terminal__header
+					.terminal__buttons
+						span.btn-close
+						span.btn-minimize
+						span.btn-maximize
+					.terminal__title dev-profile.ts
+					.terminal__status active
+				.terminal__body
+					pre.terminal__code
+						span.tok-keyword const 
+						span.tok-var developer 
+						span.tok-punct = {
+						| 
+						span.tok-prop   name
+						span.tok-punct : 
+						span.tok-str 'Anton Cherepov'
+						span.tok-punct ,
+						| 
+						span.tok-prop   role
+						span.tok-punct : 
+						span.tok-str 'Senior Front-End Developer'
+						span.tok-punct ,
+						| 
+						span.tok-prop   location
+						span.tok-punct : 
+						span.tok-str 'Diemen, Netherlands'
+						span.tok-punct ,
+						| 
+						span.tok-prop   experience
+						span.tok-punct : 
+						span.tok-str '15+ Years'
+						span.tok-punct ,
+						| 
+						span.tok-prop   current
+						span.tok-punct : 
+						span.tok-str 'Rabobank (Platform team)'
+						span.tok-punct ,
+						| 
+						span.tok-prop   skills
+						span.tok-punct : [
+						span.tok-str 'TS'
+						span.tok-punct , 
+						span.tok-str 'Angular'
+						span.tok-punct , 
+						span.tok-str 'React'
+						span.tok-punct , 
+						span.tok-str 'Node'
+						span.tok-punct ],
+						| 
+						span.tok-prop   principles
+						span.tok-punct : [
+						span.tok-str 'S.O.L.I.D.'
+						span.tok-punct , 
+						span.tok-str 'Clean Code'
+						span.tok-punct , 
+						span.tok-str 'Performance'
+						span.tok-punct ],
+						| 
+						span.tok-prop   status
+						span.tok-punct : 
+						span.tok-str 'Open to Innovations'
+						| 
+						span.tok-punct };
+						span.cursor-blink
+
+	a.scroll-indicator(href="#about", aria-label="Scroll to About section")
+		.scroll-indicator__mouse
+		span SCROLL

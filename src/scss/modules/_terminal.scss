@@ -1,0 +1,137 @@
+@use './../tools/variables';
+@use './../tools/placeholders';
+
+.terminal {
+	@extend %glass-card;
+	border-radius: variables.$radius-lg;
+	overflow: hidden;
+	width: 100%;
+	max-width: 520px;
+	box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(56, 189, 248, 0.15);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 12px 18px;
+		background: rgba(0, 0, 0, 0.4);
+		border-bottom: 1px solid variables.$border-subtle;
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+		span {
+			width: 11px;
+			height: 11px;
+			border-radius: 50%;
+			display: inline-block;
+
+			&.btn-close {
+				background-color: #ef4444;
+			}
+			&.btn-minimize {
+				background-color: #f59e0b;
+			}
+			&.btn-maximize {
+				background-color: #10b981;
+			}
+		}
+	}
+
+	&__title {
+		font-family: variables.$ff-mono;
+		font-size: 1.2rem;
+		color: variables.$text-muted;
+		letter-spacing: -0.02em;
+	}
+
+	&__status {
+		font-family: variables.$ff-mono;
+		font-size: 1.1rem;
+		color: variables.$accent-emerald;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+
+		&::before {
+			content: '';
+			width: 6px;
+			height: 6px;
+			background: variables.$accent-emerald;
+			border-radius: 50%;
+		}
+	}
+
+	&__body {
+		padding: 20px;
+		font-family: variables.$ff-mono;
+		font-size: 1.35rem;
+		line-height: 1.7;
+		background: rgba(8, 12, 22, 0.85);
+		overflow-x: auto;
+	}
+
+	&__code {
+		display: block;
+		white-space: pre-wrap;
+		word-break: break-word;
+	}
+
+	/* Syntax Highlights */
+	.tok-keyword {
+		color: #f472b6; /* pink */
+		font-weight: 600;
+	}
+
+	.tok-var {
+		color: #60a5fa; /* blue */
+	}
+
+	.tok-prop {
+		color: #93c5fd; /* light blue */
+	}
+
+	.tok-str {
+		color: #34d399; /* emerald green */
+	}
+
+	.tok-num {
+		color: #fbbf24; /* amber */
+	}
+
+	.tok-bool {
+		color: #c084fc; /* purple */
+	}
+
+	.tok-comment {
+		color: #64748b; /* slate gray */
+		font-style: italic;
+	}
+
+	.tok-punct {
+		color: #94a3b8;
+	}
+
+	.cursor-blink {
+		display: inline-block;
+		width: 8px;
+		height: 1.3em;
+		background-color: variables.$accent-cyan;
+		vertical-align: middle;
+		margin-left: 2px;
+		animation: blink 1s step-end infinite;
+	}
+}
+
+@keyframes blink {
+	0%, 100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}

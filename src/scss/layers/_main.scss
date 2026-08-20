@@ -1,98 +1,152 @@
 @use './../tools/variables';
+@use './../tools/placeholders';
 
 #intro {
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    height: 100vh;
-    min-height: 500px;
-    max-height: 1080px;
-    background: rgba(3, 108, 160, 0.72) url('/images/hero_image.png') 50% 50% no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    font-size: 2.1rem;
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	padding-top: calc(#{variables.$m-navbar-height} + 40px);
+	padding-bottom: 80px;
+	box-sizing: border-box;
+
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1.15fr 0.85fr;
+		align-items: center;
+		gap: 50px;
+		margin: 0 auto;
+		max-width: variables.$m-section-mw;
+		width: 100%;
+		padding: 0 variables.$m-basic-padding;
+
+		@media screen and (max-width: 960px) {
+			grid-template-columns: 1fr;
+			gap: 40px;
+			text-align: center;
+		}
+	}
 }
 
-// Source: https: //wojtek.im/journal/targeting-safari-with-css-media-query
-@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
-    #intro {
-        background-attachment: initial;
-    }
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	@media screen and (max-width: 960px) {
+		align-items: center;
+	}
+
+	&__status {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		padding: 6px 16px;
+		border-radius: variables.$radius-full;
+		background: rgba(16, 185, 129, 0.1);
+		border: 1px solid rgba(16, 185, 129, 0.3);
+		color: #34d399;
+		font-family: variables.$ff-mono;
+		font-size: 1.25rem;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		width: fit-content;
+
+		.status-dot {
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: variables.$accent-emerald;
+			box-shadow: 0 0 10px variables.$accent-emerald;
+			animation: pulse-dot 2s infinite ease-in-out;
+		}
+	}
+
+	&__title {
+		font-size: 4.8rem;
+		font-weight: 800;
+		line-height: 1.1;
+		letter-spacing: -0.04em;
+		color: variables.$text-primary;
+		margin: 0;
+
+		@media screen and (max-width: 780px) {
+			font-size: 3.6rem;
+		}
+
+		.title-gradient {
+			background: linear-gradient(135deg, #fff 20%, variables.$accent-cyan 70%, variables.$accent-blue 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	&__role {
+		font-family: variables.$ff-mono;
+		font-size: 1.8rem;
+		font-weight: 500;
+		color: variables.$accent-cyan;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		&::before {
+			content: '>';
+			color: variables.$accent-blue;
+		}
+	}
+
+	&__bio {
+		font-size: 1.7rem;
+		line-height: 1.7;
+		color: variables.$text-secondary;
+		margin: 0;
+		max-width: 540px;
+
+		strong {
+			color: variables.$text-primary;
+			font-weight: 600;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 14px;
+		margin-top: 8px;
+
+		@media screen and (max-width: 960px) {
+			justify-content: center;
+		}
+	}
+
+	&__tech-strip {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		margin-top: 10px;
+		padding-top: 20px;
+		border-top: 1px solid variables.$border-subtle;
+		flex-wrap: wrap;
+
+		@media screen and (max-width: 960px) {
+			justify-content: center;
+		}
+
+		&-label {
+			font-family: variables.$ff-mono;
+			font-size: 1.2rem;
+			color: variables.$text-muted;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+	}
 }
 
-.info {
-    position: relative;
-    width: 100%;
-    margin: 0 0 5em;
-    padding: variables.$m-main-h1-size-desktop 0;
-    background-color: rgba(255, 255, 255, .35);
-    text-align: center;
-    font-size: 1em;
-
-
-    @media screen and (max-width: 780px) {
-        margin-bottom: 2em;
-        padding: variables.$m-main-h1-size-mobile 0;
-    }
-
-    &__name {
-        margin: 0 0 .3em;
-        line-height: 1;
-        font-size: variables.$m-main-h1-size-desktop--name;
-        font-weight: 800;
-        font-family: variables.$ff-impact;
-        text-transform: uppercase;
-        color: #052c48;
-        text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
-        white-space: break-spaces;
-        text-align: center;
-        width: min-content;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: -1.3em;
-        transition: all .15s ease-in-out;
-
-        @media screen and (max-width: 780px) {
-            font-size: variables.$m-main-h1-size-desktop;
-            margin-top: 0;
-        }
-    }
-
-    &__position {
-        margin: 0;
-        line-height: 1;
-        font-size: variables.$m-main-h2-size-desktop;
-        font-family: variables.$ff-lato-semibold;
-        color: #004060;
-        text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
-    }
-}
-
-.download {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-
-    &__text {
-        font-size: 1.8rem;
-        margin-bottom: .5em;
-        text-align: center;
-        color: white;
-    }
-
-    &__links {
-        margin: 0;
-    }
-
-    &__button {
-        margin: 0 5px;
-        min-width: 40px;
-        line-height: 1em;
-        text-align: center;
-    }
+.hero-terminal-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }

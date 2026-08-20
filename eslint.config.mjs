@@ -1,13 +1,18 @@
-import { defineConfig } from 'eslint/config';
+import tseslint from 'typescript-eslint';
 
-export default defineConfig({
-  rules: {
-    '@typescript-eslint/no-explicit-any': [
-      'error',
-      {
-        ignoreRestArgs: true,
-      },
-    ],
+export default tseslint.config(
+  {
+    ignores: ['dist/**', 'node_modules/**'],
   },
-  ignores: ['dist/**/*'],
-});
+  ...tseslint.configs.recommended,
+  {
+    rules: {
+      '@typescript-eslint/no-explicit-any': [
+        'error',
+        {
+          ignoreRestArgs: true,
+        },
+      ],
+    },
+  }
+);

@@ -1,18 +1,46 @@
+@use './../tools/variables';
 @use './../tools/placeholders';
 
 #projects {
-	@extend %grey-section;
+	@extend %section;
 
-	.project {
-		&__image {
-			@media screen and (max-width: 780px) {
-				display: none;
+	.github-banner {
+		@extend %glass-card;
+		margin-top: 40px;
+		padding: 24px 30px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		flex-wrap: wrap;
+
+		&__content {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+
+			svg {
+				width: 32px;
+				height: 32px;
+				fill: #fff;
 			}
 		}
 
-		&__info {
-			@media screen and (max-width: 780px) {
-				width: 100%;
+		&__text {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			h4 {
+				margin: 0;
+				font-size: 1.6rem;
+				color: variables.$text-primary;
+			}
+
+			p {
+				margin: 0;
+				font-size: 1.35rem;
+				color: variables.$text-muted;
 			}
 		}
 	}
