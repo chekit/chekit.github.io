@@ -133,12 +133,10 @@
 		padding-top: 6px;
 
 		&::before {
-			content: '';
-			width: 4px;
-			height: 7px;
-			background: variables.$accent-cyan;
-			border-radius: 2px;
+			color: variables.$border-medium;
+			font-weight: bold;
 			animation: scroll-wheel 2s infinite ease-in-out;
+			content: '\2304';
 		}
 	}
 }
