@@ -1,3 +1,4 @@
+@use 'navbar';
 @use 'buttons';
 @use 'heading';
 @use 'tags';
@@ -7,3 +8,5 @@
 @use 'education-block';
 @use 'project-block';
 @use 'icons';
+@use 'terminal';
+@use 'toast';

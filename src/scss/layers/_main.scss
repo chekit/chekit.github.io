@@ -1,98 +1,316 @@
 @use './../tools/variables';
+@use './../tools/placeholders';
 
 #intro {
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    height: 100vh;
-    min-height: 500px;
-    max-height: 1080px;
-    background: rgba(3, 108, 160, 0.72) url('/images/hero_image.png') 50% 50% no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    font-size: 2.1rem;
+	position: relative;
+	min-height: min(900px, 100vh);
+	display: flex;
+	align-items: center;
+	padding-top: calc(#{variables.$m-navbar-height} + 70px);
+	padding-bottom: 100px;
+	background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
+	box-sizing: border-box;
+	overflow: hidden;
+
+	.wrapper {
+		position: relative;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+		align-items: center;
+		gap: 90px;
+		margin: 0 auto;
+		max-width: variables.$m-section-mw;
+		width: 100%;
+		padding: 0 variables.$m-basic-padding;
+
+		@media screen and (max-width: 960px) {
+			grid-template-columns: 1fr;
+			gap: 40px;
+			text-align: center;
+		}
+	}
 }
 
-// Source: https: //wojtek.im/journal/targeting-safari-with-css-media-query
-@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
-    #intro {
-        background-attachment: initial;
-    }
+.hero-pattern {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	pointer-events: none;
+
+	&__line {
+		position: absolute;
+		left: -18%;
+		width: 136%;
+		height: 70%;
+		border: 1px solid rgba(221, 0, 49, 0.1);
+		border-left-color: transparent;
+		border-right-color: transparent;
+		border-radius: 50%;
+		transform: rotate(-7deg);
+		transition: transform 0.5s ease, border-color 0.5s ease, opacity 0.5s ease;
+		pointer-events: auto;
+
+		&:nth-child(1) {
+			top: -42%;
+		}
+
+		&:nth-child(2) {
+			top: -18%;
+			border-color: rgba(255, 109, 0, 0.11);
+			border-left-color: transparent;
+			border-right-color: transparent;
+		}
+
+		&:nth-child(3) {
+			top: 8%;
+		}
+
+		&:nth-child(4) {
+			top: 34%;
+			border-color: rgba(255, 109, 0, 0.09);
+			border-left-color: transparent;
+			border-right-color: transparent;
+		}
+
+		&:hover {
+			border-color: rgba(221, 0, 49, 0.3);
+			border-left-color: transparent;
+			border-right-color: transparent;
+			opacity: 1;
+			transform: rotate(-7deg) translateY(-5px) scaleX(1.015);
+		}
+	}
+
+	@media screen and (max-width: 960px) {
+		&__line {
+			left: -55%;
+			width: 210%;
+			height: 52%;
+
+			&:nth-child(1) {
+				top: 18%;
+			}
+
+			&:nth-child(2) {
+				top: 31%;
+			}
+
+			&:nth-child(3) {
+				top: 44%;
+			}
+
+			&:nth-child(4) {
+				top: 57%;
+			}
+		}
+	}
 }
 
-.info {
-    position: relative;
-    width: 100%;
-    margin: 0 0 5em;
-    padding: variables.$m-main-h1-size-desktop 0;
-    background-color: rgba(255, 255, 255, .35);
-    text-align: center;
-    font-size: 1em;
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	position: relative;
 
+	@media screen and (max-width: 960px) {
+		align-items: center;
+	}
 
-    @media screen and (max-width: 780px) {
-        margin-bottom: 2em;
-        padding: variables.$m-main-h1-size-mobile 0;
-    }
+	&__eyebrow {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-family: variables.$ff-mono;
+		font-size: 1.15rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: variables.$text-muted;
 
-    &__name {
-        margin: 0 0 .3em;
-        line-height: 1;
-        font-size: variables.$m-main-h1-size-desktop--name;
-        font-weight: 800;
-        font-family: variables.$ff-impact;
-        text-transform: uppercase;
-        color: #052c48;
-        text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
-        white-space: break-spaces;
-        text-align: center;
-        width: min-content;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: -1.3em;
-        transition: all .15s ease-in-out;
+		span:first-child,
+		span:nth-child(3) {
+			color: variables.$accent-blue;
+		}
+	}
 
-        @media screen and (max-width: 780px) {
-            font-size: variables.$m-main-h1-size-desktop;
-            margin-top: 0;
-        }
-    }
+	&__status {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		padding: 7px 12px;
+		border: 1px solid rgba(221, 0, 49, 0.2);
+		border-radius: variables.$radius-full;
+		background: rgba(221, 0, 49, 0.06);
+		color: variables.$accent-blue;
+		font-family: variables.$ff-mono;
+		font-size: 1.25rem;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		width: fit-content;
 
-    &__position {
-        margin: 0;
-        line-height: 1;
-        font-size: variables.$m-main-h2-size-desktop;
-        font-family: variables.$ff-lato-semibold;
-        color: #004060;
-        text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
-    }
+		.status-dot {
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: variables.$accent-emerald;
+			box-shadow: 0 0 0 4px rgba(22, 134, 107, 0.14);
+			animation: pulse-dot 2s infinite ease-in-out;
+		}
+	}
+
+	&__title {
+		font-family: variables.$ff-sans;
+		font-size: clamp(5.8rem, 8vw, 10rem);
+		font-weight: 900;
+		line-height: 0.88;
+		letter-spacing: -0.06em;
+		color: variables.$text-primary;
+		margin: 0;
+
+		@media screen and (max-width: 780px) {
+			font-size: clamp(4.6rem, 16vw, 5.8rem);
+		}
+
+		.title-gradient {
+			background: linear-gradient(110deg, variables.$accent-cyan 0%, variables.$accent-purple 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	&__role {
+		font-family: variables.$ff-mono;
+		font-size: 1.55rem;
+		font-weight: 700;
+		color: variables.$text-primary;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		&::before {
+			content: '>';
+			color: variables.$accent-cyan;
+		}
+	}
+
+	&__bio {
+		font-size: 1.8rem;
+		line-height: 1.55;
+		color: variables.$text-secondary;
+		margin: 0;
+		max-width: 540px;
+
+		strong {
+			color: variables.$text-primary;
+			font-weight: 600;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 14px;
+		margin-top: 8px;
+
+		@media screen and (max-width: 960px) {
+			justify-content: center;
+		}
+
+		@media screen and (max-width: 520px) {
+			align-items: stretch;
+
+			.btn,
+			.cv-buttons {
+				width: 100%;
+			}
+		}
+	}
+
+	&__tech-strip {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		margin-top: 10px;
+		padding-top: 18px;
+		border-top: 1px solid variables.$border-subtle;
+		flex-wrap: wrap;
+
+		@media screen and (max-width: 960px) {
+			justify-content: center;
+		}
+
+		&-label {
+			font-family: variables.$ff-mono;
+			font-size: 1.2rem;
+			color: variables.$text-muted;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+	}
 }
 
-.download {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+.hero-terminal-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 34px 0 0 34px;
 
-    &__text {
-        font-size: 1.8rem;
-        margin-bottom: .5em;
-        text-align: center;
-        color: white;
-    }
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0 34px 34px 0;
+		border: 1px solid rgba(221, 0, 49, 0.18);
+		border-radius: variables.$radius-lg;
+		background: linear-gradient(135deg, rgba(221, 0, 49, 0.12), rgba(255, 109, 0, 0.08));
+		z-index: -1;
+	}
 
-    &__links {
-        margin: 0;
-    }
+	@media screen and (max-width: 960px) {
+		padding: 25px 25px 0 0;
+	}
+}
 
-    &__button {
-        margin: 0 5px;
-        min-width: 40px;
-        line-height: 1em;
-        text-align: center;
-    }
+.hero-note {
+	position: absolute;
+	top: 0;
+	right: 0;
+	max-width: 170px;
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+	font-family: variables.$ff-mono;
+	text-transform: uppercase;
+
+	&__index {
+		font-size: 2.4rem;
+		font-weight: 800;
+		color: variables.$accent-cyan;
+	}
+
+	&__label {
+		max-width: 120px;
+		font-size: 1rem;
+		line-height: 1.25;
+		color: variables.$text-muted;
+		text-align: right;
+	}
+
+	@media screen and (max-width: 520px) {
+		max-width: 145px;
+		gap: 5px;
+
+		&__index {
+			font-size: 2rem;
+		}
+
+		&__label {
+			max-width: 95px;
+			font-size: 0.9rem;
+		}
+	}
 }

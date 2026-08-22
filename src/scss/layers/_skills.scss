@@ -1,6 +1,50 @@
+@use './../tools/variables';
 @use './../tools/placeholders';
 
 #skills {
-	@extend %white-section;
-	@extend %no-border-bottom;
+	@extend %section;
+
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 24px;
+		width: 100%;
+	}
+
+	.skills-legend {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		margin-top: 40px;
+		flex-wrap: wrap;
+
+		&__item {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			font-family: variables.$ff-mono;
+			font-size: 1.2rem;
+			color: variables.$text-muted;
+
+			.legend-dot {
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+
+				&.cyan {
+					background: variables.$accent-cyan;
+					box-shadow: 0 0 8px variables.$accent-cyan;
+				}
+				&.emerald {
+					background: variables.$accent-emerald;
+					box-shadow: 0 0 8px variables.$accent-emerald;
+				}
+				&.purple {
+					background: variables.$accent-purple;
+					box-shadow: 0 0 8px variables.$accent-purple;
+				}
+			}
+		}
+	}
 }

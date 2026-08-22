@@ -1,4 +1,6 @@
+import type { Plugin } from 'vite';
+
 declare module '@vituum/vite-plugin-pug' {
-  const plugin: any;
+  const plugin: () => Plugin;
   export default plugin;
 }

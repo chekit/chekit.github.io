@@ -1,26 +1,54 @@
 @use 'variables';
 
 %section {
-	border-bottom: 1px solid variables.$c-section-border;
+	position: relative;
+	width: 100%;
+	padding: 130px variables.$m-basic-padding;
+	box-sizing: border-box;
+
+	@media screen and (max-width: 780px) {
+		padding: 60px variables.$m-basic-padding;
+	}
 
 	.wrapper {
 		margin: 0 auto;
 		max-width: variables.$m-section-mw;
+		width: 100%;
+		box-sizing: border-box;
 	}
 }
 
-%white-section {
-	@extend %section;
+%surface-card {
+	background: variables.$bg-card;
+	border: 1px solid variables.$border-subtle;
+	border-radius: variables.$radius-md;
+	box-shadow: variables.$shadow-card;
+	transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.3s ease;
 
-	background-color: variables.$c-white-section-bg;
+	&:hover {
+		border-color: variables.$border-medium;
+		background: variables.$bg-card-hover;
+		box-shadow: variables.$shadow-card-hover;
+		transform: translateY(-2px);
+	}
 }
 
-%grey-section {
-	@extend %white-section;
-
-	background-color: variables.$c-grey-section-bg
+%glass-card {
+	@extend %surface-card;
 }
 
-%no-border-bottom {
-	border-bottom: none;
+%tech-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 4px 10px;
+	border-radius: variables.$radius-full;
+	font-family: variables.$ff-mono;
+	font-size: 1.2rem;
+	font-weight: 500;
+	letter-spacing: -0.01em;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid variables.$border-subtle;
+	color: variables.$text-secondary;
+	transition: all 0.2s ease;
 }

@@ -1,7 +1,113 @@
-#contacts {
-	background-color: #3498db;
+@use './../tools/variables';
+@use './../tools/placeholders';
 
-	@media screen and (max-width: 780px) {
-		padding: 10px;
+#contact {
+	@extend %section;
+
+	.contact-card {
+		@extend %glass-card;
+		padding: 50px 40px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+		max-width: 800px;
+		margin: 0 auto;
+		border: 1px solid variables.$text-primary;
+		box-shadow: variables.$shadow-card;
+
+		@media screen and (max-width: 600px) {
+			padding: 35px 20px;
+		}
+
+		&__badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 6px 14px;
+			border-radius: variables.$radius-full;
+			background: variables.$accent-cyan;
+			border: 1px solid variables.$text-primary;
+			color: variables.$text-primary;
+			font-family: variables.$ff-mono;
+			font-size: 1.2rem;
+		}
+
+		&__title {
+			font-size: 3.2rem;
+			font-weight: 800;
+			letter-spacing: -0.03em;
+			margin: 0;
+			color: variables.$text-primary;
+
+			@media screen and (max-width: 600px) {
+				font-size: 2.5rem;
+			}
+		}
+
+		&__text {
+			font-size: 1.6rem;
+			color: variables.$text-secondary;
+			max-width: 520px;
+			margin: 0;
+			line-height: 1.6;
+		}
+
+		&__email-box {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			padding: 8px 12px 8px 20px;
+			background: variables.$text-primary;
+			border: 1px solid variables.$border-medium;
+			border-radius: variables.$radius-md;
+			max-width: 100%;
+			box-sizing: border-box;
+
+			@media screen and (max-width: 500px) {
+				flex-direction: column;
+				padding: 16px;
+				width: 100%;
+			}
+		}
+
+		&__email-text {
+			font-family: variables.$ff-mono;
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: #ff9bad;
+			letter-spacing: 0.02em;
+			word-break: break-all;
+		}
+
+		&__email-box .btn-secondary {
+			background: variables.$accent-cyan;
+			border-color: variables.$accent-cyan;
+			color: #ffffff;
+
+			&:hover {
+				background: variables.$accent-purple;
+				border-color: variables.$accent-purple;
+				color: #ffffff;
+			}
+		}
+
+		&__details {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+			flex-wrap: wrap;
+			color: variables.$text-muted;
+			font-family: variables.$ff-mono;
+			font-size: 1.25rem;
+
+			.detail-item {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+			}
+		}
 	}
 }

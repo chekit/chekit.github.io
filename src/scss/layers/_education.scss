@@ -1,5 +1,6 @@
+@use './../tools/variables';
 @use './../tools/placeholders';
 
 #education {
-	@extend %white-section;
+	@extend %section;
 }

@@ -1,25 +1,31 @@
 mixin job(positions = [])
 	.timeline
-		each position in positions
-			.timeline__item
-				.job
-					.job__date
-						p!= position.period
-					.job__icon
-						i.fa.fa-map-marker-alt
-					.job__description
-						h3!= position.employer
-						h4!= position.job
+		each position, index in positions
+			.timeline__item.reveal-on-scroll
+				.timeline__node(class=index === 0 ? 'is-current' : '')
+				.job-card(class=index === 0 ? 'is-highlight' : '')
+					.job-card__header
+						if position.period
+							span.job-card__date
+								svg.svg-icon(viewBox="0 0 24 24", width="14", height="14")
+									path(d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z")
+								!= position.period
+						h3.job-card__employer!= position.employer
+						h4.job-card__role!= position.job
+					
+					.job-card__description
 						p!= position.description
-						if position.projects
-							.job__projects
-								h3 Projects
-								.projects-list
-									each project in position.projects
-										.projects-list__item.project
-											h3.project__name!=project.name
-											.project__description
-												each desc in project.description
-													p!=desc
-											.project__tech
-												p!=`<strong>Techstack</strong>: ${project.techstack.join(', ')}.`
+
+					if position.projects && position.projects.length > 0
+						.job-card__projects
+							.job-card__projects-title // Key Project Highlights
+							each project in position.projects
+								.project-mini
+									h5.project-mini__name!= project.name
+									if project.description
+										each desc in project.description
+											p.project-mini__desc!= desc
+									if project.techstack && project.techstack.length > 0
+										.tag-list
+											each tech in project.techstack
+												span.tag.tag--sm!= tech

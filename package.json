@@ -1,6 +1,7 @@
 {
   "name": "chekit-portfolio",
   "version": "3.0.0",
+  "type": "module",
   "description": "Third variant of my portfolio site",
   "main": "dist/index.html",
   "scripts": {
@@ -8,7 +9,9 @@
     "dev": "vite",
     "build": "vite build",
     "postbuild": "cd dist && mv index.pug.html index.html",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",

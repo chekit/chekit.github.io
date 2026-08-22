@@ -1,0 +1,143 @@
+@use './../tools/variables';
+@use './../tools/placeholders';
+
+.terminal {
+	@extend %glass-card;
+	border-radius: variables.$radius-lg;
+	overflow: hidden;
+	width: 100%;
+	max-width: 520px;
+	box-shadow: variables.$shadow-card;
+	border: 1px solid variables.$border-subtle;
+	border-radius: variables.$radius-lg;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 12px 18px;
+		background: #242629;
+		border-bottom: 1px solid variables.$border-subtle;
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+		span {
+			width: 11px;
+			height: 11px;
+			border-radius: 50%;
+			display: inline-block;
+
+			&.btn-close {
+				background-color: #ef4444;
+			}
+
+			&.btn-minimize {
+				background-color: #f59e0b;
+			}
+
+			&.btn-maximize {
+				background-color: #10b981;
+			}
+		}
+	}
+
+	&__title {
+		font-family: variables.$ff-mono;
+		font-size: 1.2rem;
+		color: #f4f5f6;
+		letter-spacing: -0.02em;
+	}
+
+	&__status {
+		font-family: variables.$ff-mono;
+		font-size: 1.1rem;
+		color: variables.$accent-cyan;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+
+		&::before {
+			content: '';
+			width: 6px;
+			height: 6px;
+			background: variables.$accent-cyan;
+			border-radius: 50%;
+		}
+	}
+
+	&__body {
+		padding: 20px;
+		font-family: variables.$ff-mono;
+		font-size: 1.35rem;
+		line-height: 1.7;
+		background: #1a1d1c;
+		overflow-x: auto;
+	}
+
+	&__code {
+		display: block;
+		white-space: pre-wrap;
+		word-break: break-word;
+	}
+
+	/* Syntax Highlights */
+	.tok-keyword {
+		color: #ff9bad;
+		font-weight: 600;
+	}
+
+	.tok-var {
+		color: #a9b7ff;
+	}
+
+	.tok-prop {
+		color: #f6a7b7;
+	}
+
+	.tok-str {
+		color: #9fe3d7;
+	}
+
+	.tok-num {
+		color: #ffbd80;
+	}
+
+	.tok-bool {
+		color: #ffc2a1;
+	}
+
+	.tok-comment {
+		color: #98a0aa;
+		font-style: italic;
+	}
+
+	.tok-punct {
+		color: #c7cec8;
+	}
+
+	.cursor-blink {
+		display: inline-block;
+		width: 8px;
+		height: 1.3em;
+		background-color: variables.$accent-cyan;
+		vertical-align: middle;
+		margin-left: 2px;
+		animation: blink 1s step-end infinite;
+	}
+}
+
+@keyframes blink {
+
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+}

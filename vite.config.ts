@@ -1,18 +1,16 @@
 import pug from '@vituum/vite-plugin-pug';
 import { defineConfig } from 'vite';
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [pug()],
-  build: {
-    rollupOptions: {
-      input: ['index.pug.html'],
-      output: { dir: 'dist' },
+  ...(command === 'build' && {
+    build: {
+      rollupOptions: {
+        input: ['index.pug.html'],
+        output: { dir: 'dist' },
+      },
     },
-  },
-  server: {
-    port: 3000,
-  },
-  preview: {
-    port: 3001,
-  },
-});
+  }),
+  server: { port: 3000 },
+  preview: { port: 3001 },
+}));

@@ -1,31 +1,76 @@
-.avatar {
-	box-shadow: 3px 4px 9px rgba(0, 0, 0, .25);
-	overflow: hidden;
-	width: 200px;
-	height: auto;
-	border: 1px solid #ccc;
+@use './../tools/variables';
 
-	&__image{
-		display: block;
-		width: 100%;
-	}
+.avatar-wrapper {
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
 
-	&:before {
-		position: absolute;
-		z-index: 10;
-		width: 100%;
-		height: 100%;
-		box-sizing: border-box;
-		border: 16px solid #f8f8f8;
-		box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.25);
+	&::before {
 		content: '';
+		position: absolute;
+		inset: -8px;
+		background: linear-gradient(135deg, variables.$accent-cyan, variables.$accent-blue, variables.$accent-purple);
+		border-radius: 24px;
+		opacity: 0.5;
+		filter: blur(14px);
+		z-index: 0;
 	}
 
-	#about & {
+	&__box {
+		position: relative;
+		width: 240px;
+		height: 240px;
+		border-radius: 20px;
+		overflow: hidden;
+		border: 2px solid variables.$text-primary;
+		background: variables.$text-primary;
+		z-index: 1;
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+
+		@media screen and (max-width: 480px) {
+			width: 200px;
+			height: 200px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			transition: transform 0.4s ease;
+		}
+
+		&:hover img {
+			transform: scale(1.04);
+		}
+	}
+
+	&__badge {
 		position: absolute;
-		left: 0;
-		right: 0;
-		margin: auto;
-		transform: rotate(8deg);
+		bottom: -10px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+		white-space: nowrap;
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		padding: 6px 14px;
+		background: variables.$bg-card-hover;
+		border: 1px solid variables.$accent-cyan;
+		border-radius: variables.$radius-full;
+		font-family: variables.$ff-mono;
+		font-size: 1.15rem;
+		font-weight: 600;
+		color: variables.$text-primary;
+		box-shadow: 0 4px 15px rgba(0, 240, 255, 0.25);
+
+		.status-dot {
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			background-color: variables.$accent-emerald;
+			box-shadow: 0 0 8px variables.$accent-emerald;
+		}
 	}
 }

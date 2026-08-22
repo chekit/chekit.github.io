@@ -1,15 +1,46 @@
 section#about
 	.wrapper
-		.heading
-			h2 About me
-			.avatar
-				img.avatar__image(src="images/avatar.jpg")
-		.body
-			p.body__text
-				| Hello, my name is Anton, and I live in Diemen, Netherlands.
-				| I'm passionate about <strong>frontend development</strong>. I have worked on many projects both as an employee and as a freelance developer.
+		.section-heading.reveal-on-scroll
+			span.section-heading__tag 01. Profile
+			h2.section-heading__title
+				| About
+				span.highlight Me
+			p.section-heading__subtitle
+				| Designing reliable frontend architectures and engineering seamless digital experiences.
 
-			p.body__text
-				| My current everyday stack includes <strong>TypeScript</strong>, <strong>Angular</strong>, <strong>RxJS</strong>, and related technologies.
-				| I also have experience with <strong>React.js</strong>, <strong>NestJS</strong>, and <strong>Node.js</strong>. Additionally, I’m exploring backend technologies and have experience with <strong>Kotlin</strong> and the <strong>Spring Boot framework</strong>.
-				| I’m also enthusiastic about programming fundamentals such as algorithms, design patterns, data structures, project architecture principles (e.g., S.O.L.I.D.), and core object-oriented programming concepts.
+		.about-container
+			.about-sidebar.reveal-on-scroll
+				.avatar-wrapper
+					.avatar-wrapper__box
+						img(src="images/avatar.jpg", alt="Anton Cherepov")
+					.avatar-wrapper__badge
+						span.status-dot
+						span Diemen, Netherlands
+
+			.about-content.reveal-on-scroll
+				p
+					| Hello! My name is <strong>Anton</strong>, and I live in Diemen, Netherlands. I'm deeply passionate about <strong>frontend development and software architecture</strong>. Over the past 15+ years, I have built and delivered high-impact web applications both as a lead/senior engineer in financial institutions and tech companies, and as an independent contractor.
+
+				p
+					| My everyday core stack centers around <strong>TypeScript</strong>, <strong>Angular</strong>, <strong>RxJS</strong>, <strong>NX</strong>, and modern tooling. On the backend, I work with <strong>NestJS</strong>, <strong>Node.js</strong>, and have contributed into backend services with <strong>Kotlin</strong> and <strong>Spring Boot</strong>.
+
+				p
+					| Beyond frameworks, I am deeply committed to software craftsmanship: applying <strong>S.O.L.I.D. principles</strong>, design patterns, robust data structures, and creating maintainable, scalable architectures that enable engineering teams to move fast with confidence.
+
+				.about-stats
+					.stat-card
+						span.stat-card__number 15+
+						span.stat-card__label Years Experience
+						span.stat-card__desc Web development & engineering
+					.stat-card
+						span.stat-card__number Platform
+						span.stat-card__label Rabobank
+						span.stat-card__desc Internal tooling & architecture
+					.stat-card
+						span.stat-card__number Enterprise
+						span.stat-card__label Scale & Quality
+						span.stat-card__desc Financial & medical systems
+					.stat-card
+						span.stat-card__number Full-Stack
+						span.stat-card__label Ecosystem
+						span.stat-card__desc TS, Node, Kotlin & Spring Boot

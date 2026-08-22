@@ -1,32 +1,81 @@
+@use './../tools/variables';
 @use './../tools/placeholders';
 
 #about {
-	@extend %white-section;
+	@extend %section;
 
-	overflow: hidden;
-	min-height: 300px;
+	.about-container {
+		display: grid;
+		grid-template-columns: 320px 1fr;
+		gap: 64px;
+		align-items: start;
 
-	.wrapper {
+		@media screen and (max-width: 900px) {
+			grid-template-columns: 1fr;
+			gap: 40px;
+			text-align: center;
+		}
+	}
+
+	.about-sidebar {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: space-around;
-
-		max-width: 1170px;
+		gap: 28px;
 	}
 
-	.heading {
-		align-self: flex-start;
-		margin-top: 1rem;
-		width: 33%;
+	.about-content {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		p {
+			font-size: 1.7rem;
+			line-height: 1.7;
+			color: variables.$text-secondary;
+			margin: 0;
+
+			strong {
+				color: variables.$text-primary;
+				font-weight: 600;
+			}
+		}
 	}
 
-	.body {
-		width: 67%;
-	}
+	.about-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		gap: 20px;
+		margin-top: 10px;
+		word-wrap: break-word;
+		hyphens: auto;
 
-	.avatar {
-		@media screen and (max-width: 780px) {
-			display: none;
+		.stat-card {
+			@extend %glass-card;
+			padding: 22px;
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
+
+			&__number {
+				font-family: variables.$ff-mono;
+				font-size: 2.8rem;
+				font-weight: 800;
+				color: variables.$accent-blue;
+				line-height: 1;
+			}
+
+			&__label {
+				font-size: 1.3rem;
+				font-weight: 600;
+				color: variables.$text-primary;
+			}
+
+			&__desc {
+				font-size: 1.2rem;
+				color: variables.$text-muted;
+				line-height: 1.4;
+			}
 		}
 	}
 }
